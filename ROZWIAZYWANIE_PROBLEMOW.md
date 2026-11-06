@@ -39,7 +39,39 @@ Oryginalny kod blokował zamykanie panelu podczas otwierania paczek (`main.rolli
 
 ---
 
-## 🚨 Problem #2: Błąd SQL "Unknown column 'date'"
+## 🚨 Problem #2: Błąd SQL "Table doesn't exist"
+
+### Objawy:
+```
+WARNING: dbPoll failed; Table 'nitrorpg.aj' doesn't exist
+```
+Błąd powtarza się co 10 sekund w logach serwera.
+
+### ✅ Rozwiązanie:
+
+**Krok 1: Dodaj brakujące tabele**
+1. Otwórz phpMyAdmin: `http://localhost/phpmyadmin`
+2. Wybierz bazę `nitrorpg`
+3. Przejdź do zakładki **"SQL"**
+4. Otwórz plik `database/UPDATE_add_missing_tables.sql`
+5. Skopiuj całą zawartość i wklej do phpMyAdmin
+6. Kliknij **"Wykonaj"**
+
+**Krok 2: Zrestartuj serwer**
+```
+quit
+```
+Następnie uruchom ponownie `MTA Server.exe`
+
+### 📝 Szczegóły:
+Zobacz plik `NAPRAWA_BRAKUJACYCH_TABEL.md` - zawiera pełną dokumentację brakujących tabel (aj, pystories_organizacje_info, pystories_marihuana, lss_domy).
+
+### ⚙️ Przyczyna:
+W bazie danych brakowało 4 tabel używanych przez różne systemy serwera (Admin Jail, Organizacje, Marihuana, Legacy domy).
+
+---
+
+## 🚨 Problem #3: Błąd SQL "Unknown column 'date'"
 
 ### Objawy:
 ```
@@ -72,7 +104,7 @@ Tabela `pystories_houses` była niepełna - brakowało 3 kolumn używanych przez
 
 ---
 
-## 🚨 Problem #3: Błąd ACL "Line 343: Error reading end tag"
+## 🚨 Problem #4: Błąd ACL "Line 343: Error reading end tag"
 
 ### Objawy:
 ```
@@ -93,7 +125,7 @@ Nieprawidłowa struktura XML - grupa `DevACL` nie była zamknięta przed dodanie
 
 ---
 
-## 🚨 Problem #4: Duplicate column name 'owner_name'
+## 🚨 Problem #5: Duplicate column name 'owner_name'
 
 ### Objawy:
 ```
@@ -123,7 +155,7 @@ Zobacz plik `NAPRAWA_BAZY.md` sekcja "Wersja 1.2".
 
 ---
 
-## 🚨 Problem #5: Serwer nie startuje
+## 🚨 Problem #6: Serwer nie startuje
 
 ### Objawy:
 - Okno konsoli MTA Server się zamyka
@@ -161,7 +193,7 @@ dbConnection = dbConnect("mysql", "dbname=nitrorpg;host=127.0.0.1;port=3306;char
 
 ---
 
-## 🚨 Problem #6: Zasoby nie ładują się
+## 🚨 Problem #7: Zasoby nie ładują się
 
 ### Objawy:
 - Serwer startuje ale niektóre funkcje nie działają
@@ -194,7 +226,7 @@ Plik `acl.xml` musi zawierać grupy:
 
 ---
 
-## 🚨 Problem #7: Discord bot nie działa
+## 🚨 Problem #8: Discord bot nie działa
 
 ### Objawy:
 - Brak integracji z Discordem
@@ -234,7 +266,7 @@ Plik `acl.xml` musi zawierać grupy:
 
 ---
 
-## 🚨 Problem #8: Gracze nie mogą się zalogować
+## 🚨 Problem #9: Gracze nie mogą się zalogować
 
 ### Objawy:
 - Panel logowania nie pokazuje się

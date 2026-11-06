@@ -477,3 +477,82 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+-- ============================================================================
+-- TABLE: aj (Admin Jail - Więzienie administracyjne)
+-- ============================================================================
+
+DROP TABLE IF EXISTS `aj`;
+CREATE TABLE `aj` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `Serial` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Serial MTA gracza',
+  `Termin` datetime NOT NULL COMMENT 'Data zakończenia kary',
+  `Cela` int(11) NOT NULL DEFAULT 1 COMMENT 'Numer celi',
+  `Powod` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Powód uwięzienia',
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Data nałożenia kary',
+  PRIMARY KEY (`id`),
+  KEY `Serial` (`Serial`),
+  KEY `Termin` (`Termin`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ============================================================================
+-- TABLE: pystories_organizacje_info (Organizacje graczy)
+-- ============================================================================
+
+DROP TABLE IF EXISTS `pystories_organizacje_info`;
+CREATE TABLE `pystories_organizacje_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nazwa` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `zalozyciel` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `zalozyciel_sid` int(11) NOT NULL,
+  `data_zalozenia` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `punkty` int(11) NOT NULL DEFAULT 0,
+  `kasa` int(11) NOT NULL DEFAULT 0,
+  `spawn_pos` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `spawn_interior` int(11) NOT NULL DEFAULT 0,
+  `spawn_dimension` int(11) NOT NULL DEFAULT 0,
+  `opis` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `nazwa` (`nazwa`),
+  KEY `zalozyciel_sid` (`zalozyciel_sid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ============================================================================
+-- TABLE: pystories_marihuana (Sadzonki marihuany)
+-- ============================================================================
+
+DROP TABLE IF EXISTS `pystories_marihuana`;
+CREATE TABLE `pystories_marihuana` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sid` int(11) NOT NULL,
+  `pos_x` float NOT NULL,
+  `pos_y` float NOT NULL,
+  `pos_z` float NOT NULL,
+  `czas_posadzenia` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `czas_zbioru` datetime NOT NULL,
+  `zebrana` tinyint(1) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`),
+  KEY `sid` (`sid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ============================================================================
+-- TABLE: lss_domy (Legacy - stary system domów)
+-- ============================================================================
+
+DROP TABLE IF EXISTS `lss_domy`;
+CREATE TABLE `lss_domy` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `descr` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Mieszkanie',
+  `i` int(11) NOT NULL DEFAULT 0,
+  `vwe` int(11) NOT NULL DEFAULT 0,
+  `drzwi` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `punkt_wyjscia` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `interiorid` int(11) NOT NULL DEFAULT 0,
+  `koszt` int(11) NOT NULL DEFAULT 1000,
+  `active` tinyint(1) NOT NULL DEFAULT 1,
+  `owner_sid` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `owner_sid` (`owner_sid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
