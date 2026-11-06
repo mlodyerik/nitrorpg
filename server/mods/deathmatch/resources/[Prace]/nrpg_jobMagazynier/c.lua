@@ -3,6 +3,7 @@ data = {
     markerInfo = {{1773.54, -2047.99, 12.56}, "Magazynier", "Odbiór paczki"},
     jobMarker = nil,
     actualPage = "Strona główna",
+    menuVisible = false, -- NAPRAWIONE: Menu nie powinno być widoczne od razu!
     
 }
 
@@ -29,6 +30,9 @@ interface = {
 local zoom = exports["nrpg_interface"]:getInterfaceZoom()
 
 function drawInterface()
+    -- NAPRAWIONE: Renderuj tylko gdy menu jest widoczne!
+    if not data.menuVisible then return end
+    
     dxDrawImage(sx / 2 - 401/zoom, sy / 2 - 201/zoom, 802/zoom, 402/zoom, interface.backgroundColorRectangle, 0, 0, 0, tocolor(255, 255, 255, 255), false)
     dxDrawImage(sx / 2 - 400/zoom, sy / 2 - 200/zoom, 800/zoom, 400/zoom, interface.backgroundRectangle, 0, 0, 0, tocolor(255, 255, 255, 255), false)
 
@@ -102,16 +106,41 @@ function startScript()
     setElementData(data.jobMarker, "marker:icon", "pack")
     setElementData(data.jobMarker, "marker:text", data.markerInfo[2])
     setElementData(data.jobMarker, "marker:downtext", data.markerInfo[3])
+    
+    -- NAPRAWIONE: Dodano obsługę markera!
+    addEventHandler("onClientMarkerHit", data.jobMarker, function(hitElement, matchingDimension)
+        if hitElement == localPlayer and matchingDimension then
+            data.menuVisible = true
+            showCursor(true)
+        end
+    end)
+    
+    addEventHandler("onClientMarkerLeave", data.jobMarker, function(leaveElement, matchingDimension)
+        if leaveElement == localPlayer and matchingDimension then
+            data.menuVisible = false
+            showCursor(false)
+        end
+    end)
 end
 addEventHandler("onClientResourceStart", resourceRoot, startScript)
 
 addEventHandler("onClientClick", root, function(btn, state)
     if btn == "left" and state == "up" then
+        if not data.menuVisible then return end -- Tylko gdy menu jest widoczne
+        
         for i,v in ipairs(jobPages) do
             offsetY = math.floor(45/zoom)*(i-1)
             
             if isMouseIn(sx / 2 - 125/zoom, sy / 2 - 179/zoom + offsetY, 190/zoom, 40/zoom) then
                 data.actualPage = v[1]
+            end
+        end
+        
+        -- NAPRAWIONE: Obsługa przycisku "Zamknij okno"
+        if data.actualPage == "Strona główna" then
+            if isMouseIn(sx / 2 + 100/zoom, sy / 2 + 130/zoom, 248/zoom, 35/zoom) then
+                data.menuVisible = false
+                showCursor(false)
             end
         end
     end
