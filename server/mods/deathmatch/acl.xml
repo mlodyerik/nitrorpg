@@ -4,28 +4,6 @@
       <object name="user.*" />
       <object name="resource.*" />
    </group>
-   <group name="NitroRPG_Database">
-      <acl name="DatabaseACL" />
-      <object name="resource.nrpg_db" />
-      <object name="resource.DB" />
-      <object name="resource.DB2" />
-   </group>
-   <group name="NitroRPG_Core">
-      <acl name="CoreACL" />
-      <object name="resource.nrpg_core" />
-      <object name="resource.nrpg_lib" />
-      <object name="resource.nrpg_newlogin" />
-      <object name="resource.nrpg_interface" />
-      <object name="resource.nrpg_admin" />
-      <object name="resource.nrpg_adminPanel" />
-   </group>
-   <group name="NitroRPG_Factions">
-      <acl name="FactionACL" />
-      <object name="resource.nrpg_faction_*" />
-      <object name="resource.nrpg_factionsapd_*" />
-      <object name="resource.nrpg_factionsafd_*" />
-      <object name="resource.nrpg__checkFaction" />
-   </group>
    <group name="Moderator">
       <acl name="Moderator" />
       <object name="resource.mapcycler" />
@@ -46,8 +24,6 @@
       <object name="resource.admin2" />
       <object name="resource.webadmin" />
       <object name="resource.acpanel" />
-      <object name="resource.nrpg_admin" />
-      <object name="resource.nrpg_adminPanel" />
    </group>
    <group name="Console">
       <acl name="Moderator" />
@@ -59,9 +35,6 @@
    <group name="RPC">
       <acl name="RPC" />
       <object name="resource.ip2c" />
-      <object name="resource.discord" />
-      <object name="resource.discord-events" />
-      <object name="resource.nrpg_discord" />
    </group>
    <group name="MapEditor">
       <acl name="Default" />
@@ -76,6 +49,27 @@
    </group>
    <group name="DevGroup">
       <acl name="DevACL" />
+   </group>
+   <!-- ============================================================================ -->
+   <!-- NITRORPG CUSTOM GROUPS - Grupy uprawnień dla zasobów NitroRPG              -->
+   <!-- ============================================================================ -->
+   <group name="NitroRPG_Database">
+      <acl name="DatabaseACL" />
+      <object name="resource.[Serwer]/nrpg_db" />
+      <object name="resource.[Serwer]/DB" />
+      <object name="resource.[Serwer]/DB2" />
+   </group>
+   <group name="NitroRPG_Core">
+      <acl name="CoreACL" />
+      <object name="resource.[Serwer]/nrpg_core" />
+      <object name="resource.[Serwer]/nrpg_lib" />
+      <object name="resource.[Serwer]/nrpg_newlogin" />
+      <object name="resource.[Serwer]/nrpg_interface" />
+      <object name="resource.[Serwer]/nrpg_admin" />
+      <object name="resource.[Serwer]/nrpg_adminPanel" />
+   </group>
+   <group name="NitroRPG_Factions">
+      <acl name="FactionACL" />
    </group>
    <acl name="Default">
       <right name="general.ModifyOtherObjects" access="false" />
@@ -305,6 +299,9 @@
       <right name="function.restartResource" access="true" />
     </acl>
    <acl name="DevACL">
+        <right name="resource.performancebrowser.http" access="true"></right>
+        <right name="resource.ajax.http" access="true"></right>
+   </acl>
    <!-- ============================================================================ -->
    <!-- NITRORPG CUSTOM ACL - Dodatkowe uprawnienia dla zasobów NitroRPG           -->
    <!-- ============================================================================ -->
