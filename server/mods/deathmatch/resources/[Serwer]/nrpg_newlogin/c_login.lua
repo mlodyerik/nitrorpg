@@ -518,7 +518,11 @@ login.spawnPlayer = function()
     showPlayerHudComponent("crosshair", true)
     setElementData(localPlayer, 'player:sid', (getElementData(localPlayer, 'new:sid') or 0))
 	setElementData(localPlayer, 'new:sid', false)
-    resetFarClipDistance(  )
+    resetFarClipDistance()
+    
+    -- NAPRAWIONE: Dodano fadeCamera po stronie klienta!
+    fadeCamera(true, 1.0)
+    setCameraTarget(localPlayer)
 
     for i,v in ipairs(getElementsByType("texture", resourceRoot)) do
         if isElement(v) then
