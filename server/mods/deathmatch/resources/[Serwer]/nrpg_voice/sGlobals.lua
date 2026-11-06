@@ -1,4 +1,12 @@
-﻿if isVoiceEnabled() then
+﻿-- Inicjalizacja zmiennych ZAWSZE (nawet gdy voice wyłączony)
+-- FIX: Inne skrypty próbują używać tych zmiennych poza ifem!
+playerChannels = {}
+channels = {}
+globalMuted = {}
+mutedBy = {}
+settings = {}
+
+if isVoiceEnabled() then
 	TEAM_REFRESH = 4000 -- Interval in which team channels are refreshed, in MS.
 	SETTINGS_REFRESH = 5000 -- Interval in which team channels are refreshed, in MS.
 	resourceRoot = getResourceRootElement(getThisResource())
@@ -6,11 +14,7 @@
 	setElementData ( resourceRoot, "voice_enabled", true ) -- REMOVE IN 1.4
 	
 	------------------
-	playerChannels = {}
-	channels = {}
-	globalMuted = {}
-	mutedBy = {}
-	settings = {}
+	-- Zmienne już zainicjalizowane powyżej!
 
 	------------------
 	addEvent("voice_mutePlayerForPlayer", true)
