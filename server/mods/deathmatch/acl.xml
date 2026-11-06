@@ -80,6 +80,11 @@
    <group name="NitroRPG_Factions">
       <acl name="FactionACL" />
    </group>
+   
+   <group name="NitroRPG_Discord">
+      <acl name="DiscordACL" />
+      <object name="resource.nrpg_discord" />
+   </group>
    <acl name="Default">
       <right name="general.ModifyOtherObjects" access="false" />
       <right name="general.http" access="true" />
@@ -364,5 +369,11 @@
       <right name="general.ModifyOtherObjects" access="true" />
       <right name="function.setPlayerMuted" access="true" />
       <right name="function.kickPlayer" access="true" />
+   </acl>
+   
+   <acl name="DiscordACL">
+      <right name="general.http" access="true" />
+      <right name="function.fetchRemote" access="true" />
+      <right name="function.callRemote" access="true" />
    </acl>
 </acl>
