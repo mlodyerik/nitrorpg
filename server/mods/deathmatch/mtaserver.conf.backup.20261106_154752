@@ -1,0 +1,609 @@
+<config>
+
+    <!-- This parameter specifies the name the server will be visible as in the ingame server browser
+         and on Game-Monitor. It is a required parameter. -->
+    <servername>NitroRPG - Serwer Roleplay</servername>
+
+    <!-- The rule parameters are optional settings that the server will make public for the server browser/list.
+         A brief description of the server. -->
+    <rule name="description" value="Serwer Roleplay NitroRPG - Los Santos" />
+
+    <!-- A comma separated list of languages that the server supports (e.g. en). -->
+    <rule name="languages" value="" />
+
+    <!-- A comma separated list of tags that describe the server (e.g. freeroam,roleplay). -->
+    <rule name="tags" value="roleplay,rpg,nitro,polski,polish,economy" />
+
+    <!-- The URL of the server's website. -->
+    <rule name="website_url" value="" />
+
+    <!-- A social media URL #1 (e.g. Discord). -->
+    <rule name="social_url_1" value="" />
+
+    <!-- A social media URL #2 (e.g. YouTube). -->
+    <rule name="social_url_2" value="" />
+
+    <!-- A social media URL #3 (e.g. Facebook). -->
+    <rule name="social_url_3" value="" />
+
+    <!-- This parameter specifies the contact email addresses for the owner(s) of this server.
+         The email addresses will not be publicly available, and only used by MTA administrators
+         to contact the server owner.
+         Note: Missing or incorrect owner_email_address can affect visibility in the master server list.
+         Values: Comma separated list of email addresses -->
+    <owner_email_address></owner_email_address>
+
+    <!-- ONLY USE THIS PARAMETER IF YOU ARE SURE OF WHAT YOU ARE DOING - it is generally only
+         needed for professional servers and should be left at the default value otherwise.
+         This parameter specifies the IP to use for servers that have multiple IP addresses. If set
+         to auto, it will automatically detect and use the server's standard local IP address.
+         Values: auto or x.x.x.x ; default value: auto -->
+    <!-- SERVERIP SHOULD BE LEFT SET TO auto UNLESS YOU ARE SURE OF WHAT YOU ARE DOING -->
+    <serverip>auto</serverip>
+    <!-- WARNING: SETTING serverip AND THEN ASKING FOR SUPPORT CAN CAUSE DEATH OR INJURY -->
+
+    <!-- This parameter specifies the UDP port on which the server will be accepting incoming player
+         connections; default value: 22003. It is a required parameter. -->
+    <serverport>22003</serverport>
+    
+    <!-- This parameter specifies the number of maximum player slots available on the server; default
+         value: 32. It is a required parameter. -->
+    <maxplayers>32</maxplayers>
+        
+    <!-- This parameter specifies the TCP port on which the server will be accepting incoming http
+         connections. It can be set to the same value as <serverport>. It is a required parameter
+         if <httpserver> is set to 1. -->
+    <httpport>22005</httpport>
+    
+    <!-- If set, this parameter specifies the external URL from which clients will be able to download
+         needed resources ingame. If not set (or the external URL files are incorrect), resource downloads
+         are switched to the internal http server. -->
+    <httpdownloadurl></httpdownloadurl>
+
+    <!-- This parameter limits the number of http connections each client can make. Depending on the type
+         of http server that is used, a lower figure may reduce download timeouts.
+         Available range: 1 to 8. -->
+    <httpmaxconnectionsperclient>5</httpmaxconnectionsperclient>
+
+    <!-- This parameter limits the number http connections that an IP can initiate over a short period of time.
+         Available range: 1 to 100. default value: 20 -->
+    <httpdosthreshold>20</httpdosthreshold>
+
+    <!-- This parameter lists the IP addresses that are to be excluded from http dos threshold limits.
+         e.g. 88.11.22.33,101.2.3.4 -->
+    <http_dos_exclude></http_dos_exclude>
+
+    <!-- By default, the server will block the use of locally customized gta3.img player skins
+         This setting can be used to allow such mods. Not recommended for competitive servers.
+         Values: none, peds ; default value: none -->
+    <allow_gta3_img_mods>none</allow_gta3_img_mods>
+
+    <!-- By default, the server will block the use of customized GTA:SA data files. -->
+    <!-- To allow specific client files, add one or more of the following: -->
+    <!-- <client_file name="data/carmods.dat" verify="0"/> -->
+
+    <!-- Comma separated list of disabled anti-cheats.
+         For details see https://wiki.multitheftauto.com/wiki/Anti-cheat_guide
+         e.g. To disable anti-cheat #2 and #3, use: 2,3 -->
+    <disableac></disableac>
+
+    <!-- Comma separated list of enabled special detections.
+         A special detection is a type of anti-cheat for usually harmless game modifications and blocking certain software.
+         Competitive servers may wish to enable certain special detections, but most servers should leave this setting on its default.
+         For details and SD codes, see https://wiki.multitheftauto.com/wiki/Anti-cheat_guide
+         Available values: special detection (SD) codes ; (e.g. To enable special detection #15 use: 15) -->
+    <enablesd></enablesd>
+
+    <!-- Minimum client version. Clients with a lower version will not be allowed to connect. After
+         disconnection, clients will be given an opportunity to download an update.
+         If left blank, this setting is disabled and there are no restrictions on who can connect.
+         Version numbers are described here: https://wiki.multitheftauto.com/wiki/GetPlayerVersion
+         and look like this: 1.1.0-9.03100.0
+         Note that this setting only determines if the client should be prompted to update. The actual
+         build number they receive will be the highest available. See: https://nightly.multitheftauto.com/ver  -->
+    <minclientversion></minclientversion>
+
+    <!-- This parameter specifies if/when the <minclientversion> setting is automatically updated.
+         Keeping <minclientversion> updated can help reduce cheating.
+         Note: The instant setting (2) is only recommended for competitive servers.
+         Values: 0 - disabled, 1 - enabled (delayed by a few days), 2 - enabled (instant) ; default value: 1.  -->
+    <minclientversion_auto_update>1</minclientversion_auto_update>
+
+    <!-- Recommended client version. When connecting, if clients have a lower version, they will be given
+         the option to download an update. If left blank, this setting is disabled.
+         Note that this setting only determines if the client should be prompted to update. The actual
+         build number they receive will be the highest available. See: https://nightly.multitheftauto.com/ver  -->
+    <recommendedclientversion></recommendedclientversion>
+
+    <!-- This parameter can be used to make the server report to Game-Monitor master servers, allowing it to
+         be visible in the ingame server browser. An additional UDP port needs to be available for this to
+         work (value from <serverport> + 123 , so on a default <serverport> value 22003 the right port
+         will be 22126 ). Available values: 0 - disabled , 1 - enabled. Optional parameter, defaults to 1. -->
+    <ase>1</ase>
+
+    <!-- This parameter allows you to disable LAN broadcasting.
+         Values: 0 - broadcast , 1 - do not broadcast ; default value: 0 -->
+    <donotbroadcastlan>0</donotbroadcastlan>
+
+    <!-- If set, players will have to provide a password specified below, before they can connect to the
+         server. If left blank, server doesn't require a password from them. -->
+    <password></password>
+
+    <!-- This parameter reduces the server's bandwidth usage by using various optimizations.
+         Values: none, medium or maximum ; default value: medium -->
+    <bandwidth_reduction>medium</bandwidth_reduction>
+
+    <!-- The following ???_sync_interval parameters determine the time in milliseconds between certain
+         network packets being sent. More information on how each settings works is available here:
+         https://wiki.multitheftauto.com/wiki/Server_mtaserver.conf -->
+    <!-- Player sync interval. Default: 100 -->
+    <player_sync_interval>100</player_sync_interval>
+    <!-- Lightweight (player) sync interval. Used when players are far apart. Default: 1500 -->
+    <lightweight_sync_interval>1500</lightweight_sync_interval>
+    <!-- Camera sync interval. Default: 500 -->
+    <camera_sync_interval>500</camera_sync_interval>
+    <!-- Ped sync interval. Default: 400 -->
+    <ped_sync_interval>400</ped_sync_interval>
+    <!-- Ped far sync interval. Used when peds are far away. Default: 2000 -->
+    <ped_far_sync_interval>2000</ped_far_sync_interval>
+    <!-- Unoccupied_vehicle sync interval. Default: 400 -->
+    <unoccupied_vehicle_sync_interval>400</unoccupied_vehicle_sync_interval>
+    <!-- Keysync mouse rotation sync interval. For limiting key sync packets due to mouse movement. Default: 100 -->
+    <keysync_mouse_sync_interval>100</keysync_mouse_sync_interval>
+    <!-- Keysync analog movement sync interval. For limiting key sync packets due to joystick movement. Default: 100 -->
+    <keysync_analog_sync_interval>100</keysync_analog_sync_interval>
+
+    <!-- This parameter can improve the reliability of shots when using certain weapons. However, it uses more bandwidth.
+         Values: 0 - disabled , 1 - enabled ; default value: 1. -->
+    <bullet_sync>1</bullet_sync>
+
+    <!-- This parameter specifies the radius in which any contact with a vehicle will turn the player into its syncer.
+         Available range: 0 to 130. Default - 30 -->
+    <vehicle_contact_sync_radius>30</vehicle_contact_sync_radius>
+
+    <!-- This parameter specifies the player position limit change alert.
+         Available range: 5 to 500. Default - 100 -->
+    <player_teleport_alert>100</player_teleport_alert>
+
+    <!-- This parameter sets the amount of extrapolation that clients will apply to remote vehicles. This can reduce
+         some of the latency induced location disparency by predicting where the remote vehicles will probably be.
+         Depending on the gamemode, an incorrect prediction may have a negative effect. Therefore this setting
+         should be considered experimental.
+         Available range: 0 to 100.  Default - 0 -->
+    <vehext_percent>0</vehext_percent>
+
+    <!-- This parameter places a limit on how much time (in milliseconds) the vehicle extrapolation will attempt to
+         compensate for.
+         Only relevant if <vehext_percent> is greater than zero.
+         Available range: 50 to 500.  Default - 150 -->
+    <vehext_ping_limit>150</vehext_ping_limit>
+
+    <!-- This parameter can reduce the delay of player actions appearing on remote clients by 2 frames (approx 50ms).
+         Due to the impact this may have on shot lag compensation, it should be considered experimental.
+         Values: 0 - disabled , 1 - enabled ; default value: 0. -->
+    <latency_reduction>0</latency_reduction>
+
+    <!-- Specifies the location and file name of this servers unique private key.
+         This is used to prevent private files saved on the client from being read by other servers.
+         More infomation about client private files can be found here: https://wiki.multitheftauto.com/wiki/Filepath
+         Keep a backup of this file in a safe place. Default value: server-id.keys-->
+    <idfile>server-id.keys</idfile>
+
+    <!-- Specifies the location and name of the main server log file. If left blank, server won't be saving this file. -->
+    <logfile>logs/server.log</logfile>
+
+    <!-- As well as the main log file, login successes and failures are logged here for easy reviewing of security issues.
+         If left blank, this file is not used -->
+    <authfile>logs/server_auth.log</authfile>
+
+    <!-- Specifies the location and name of the file used to log database queries.
+         The server command 'debugdb' sets the amount of logging. -->
+    <dbfile>logs/db.log</dbfile>
+
+    <!-- Specifies the location and name of the file used to log loadstring function calls.
+         If left blank or not set, no logging is done. -->
+    <!-- <loadstringfile>logs/loadstring.log</loadstringfile> -->
+    
+    <!-- This parameter specifies the location and name of the Access Control List settings file. If left
+         blank, server will use acl.xml file, located in the same folder as this configuration file. -->
+    <acl>acl.xml</acl>
+
+    <!-- Specifies the location and name of the debugscript log file. If left blank, server won't be saving this file. -->
+    <scriptdebuglogfile>logs/scripts.log</scriptdebuglogfile>
+
+    <!-- Specifies the level of the debugscript log file. Available values: 0, 1, 2, 3. When not set, defaults to 0. -->
+    <scriptdebugloglevel>0</scriptdebugloglevel>
+
+    <!-- Specifies the level of the html debug. Available values: 0, 1, 2, 3. When not set, defaults to 0. -->
+    <htmldebuglevel>0</htmldebuglevel>
+
+    <!-- Specifies whether or not duplicate log lines should be filtered. Available values: 0 or 1, defaults to 1. -->
+    <filter_duplicate_log_lines>1</filter_duplicate_log_lines>
+
+    <!-- Specifies the frame rate limit that will be applied to connecting clients.
+         Available range: 25 to 32767. Default: 74. You can also use 0 for uncapped fps. -->
+    <fpslimit>74</fpslimit>
+
+    <!-- This parameter specifies whether or not to enable player voice chat in-game
+         Values: 0 - disabled , 1 - enabled -->
+    <voice>0</voice>
+    
+    <!-- This parameter specifies the sample rate for voice chat.  'voice' parameter must be set to 1 for this to be effective.
+         Higher settings use more bandwidth and increase the sampling quality of voice chat
+         Values: 0 - Narrowband (8kHz), 1 - Wideband (16kHz), 2 - Ultrawideband (32kHz).  Default - 1 -->
+    <voice_samplerate>1</voice_samplerate>
+    
+    <!-- This parameter specifies the voice quality for voice chat.  'voice' parameter must be set to 1 for this to be effective.
+         Higher settings use more bandwidth and increase the the overall quality of voice chat
+         Available range: 0 to 10.  Default - 4 -->
+    <voice_quality>4</voice_quality>
+
+    <!-- This parameter controls the interval between batches of voice packets.
+         The minimum value is 50, the maximum is 1000, and the default is 100 -->
+    <voice_packets_interval>100</voice_packets_interval>
+
+    <!-- The maximum number of voice packets per interval.
+         The minimum value is 1, the maximum is 200, and the default is 64 -->
+    <max_voice_packets_per_interval>64</max_voice_packets_per_interval>
+
+    <!-- The maximum size of a voice packet buffer in bytes.
+         The minimum value is 128, the maximum is 2048, and the default is 512 -->
+    <max_voice_buffer_size>512</max_voice_buffer_size>
+
+    <!-- Specifies the voice bitrate, in bps. This optional parameter overrides the previous two settings.
+         If not set, MTA handles this automatically.  Use with care. -->
+    <!-- <voice_bitrate>24600</voice_bitrate> -->
+
+    <!-- This parameter specifies the path to use for a basic backup of some server files.
+         Note that basic backups are only made during server startup. Default value: backups -->
+    <backup_path>backups</backup_path>
+
+    <!-- This parameter specifies the number of days between each basic backup.
+         Backups are only made during server startup, so the actual interval may be much longer.
+         Setting backup_interval to 0 will disable backups
+         Available range: 0 to 30.  Default - 3 -->
+    <backup_interval>3</backup_interval>
+
+    <!-- This parameter specifies the maximum number of backup copies to keep.
+         Setting backup_copies to 0 will disable backups
+         Available range: 0 to 100.  Default - 5 -->
+    <backup_copies>5</backup_copies>
+
+    <!-- This parameter specifies when the internal sqlite databases should be defragmented.
+         https://www.sqlite.org/lang_vacuum.html
+         Values: 0 - Never, 1 - On server start only after basic backup, 2 - On server start always.  Default - 1 -->
+    <compact_internal_databases>1</compact_internal_databases>
+
+    <!-- This parameter specifies whether server crash dump files should be sent to MTA HQ.
+         Values: 0 - Off, 1 - On. Default - 1 -->
+    <crash_dump_upload>1</crash_dump_upload>
+
+    <!-- This parameter lists the ACL groups that are protected by serial authorization.
+         Login attempts to a protected account from a second serial are blocked until the serial is manually authorized via
+         the authserial command.
+         For more info see: https://multitheftauto.com/authserial
+         Note: This is security critical feature and disabling auth_serial_groups can affect visibility in the master server list.
+         Values: Comma separated list of ACL groups.  Default - Admin -->
+    <auth_serial_groups>Admin</auth_serial_groups>
+
+    <!-- This parameter specifies if the authorized serial login checks should also apply to the http interface.
+         Protected account login attempts to the http interface will only succeed if the IP address matches one
+         recently used by the account holder in-game
+         For more info see: https://multitheftauto.com/authserialhttp
+         Note: This is security critical feature and disabling auth_serial_http can affect visibility in the master server list.
+         Values: 0 - Off, 1 - Enabled.  Default - 1 -->
+    <auth_serial_http>1</auth_serial_http>
+
+    <!-- This parameter specifies which IP addresses should always pass auth_serial_http checks.
+         Values: Comma separated list of IP addresses -->
+    <auth_serial_http_ip_exceptions>127.0.0.1</auth_serial_http_ip_exceptions>
+
+    <!-- This parameter specifies if extra security measures are applied to resources which use dbConnect with mysql.
+         The extra measures are:
+           - Script files cannot be accessed with fileOpen()
+           - meta.xml is read only
+         *NOTE* This only protects resources which use dbConnect with mysql
+         Values: 0 - Off, 1 - Enabled.  Default - 1 -->
+    <database_credentials_protection>1</database_credentials_protection>
+
+     <!-- Enables extra protection for element data.
+         When this option is enabled, the server ignores element data sync packets from the client,
+         except for allowed keys.
+         Values: 0 - Off, 1 - Enabled.  Default - 0 -->
+    <elementdata_whitelisted>0</elementdata_whitelisted>
+
+    <!-- This parameter determines that the server checks when the players connect that there are no other players with the same serial number. 
+         Note that this may break compatibility with virtual machines.
+         Not guarantees that the player cannot manipulate their serial.
+         Values: 0 - Off, 1 - Enabled.  Default - 1 -->
+    <check_duplicate_serials>1</check_duplicate_serials>
+
+    <!-- These parameters specify the maximum amount of events that can be triggered by the client (via triggerServerEvent) within the given interval.
+          Note: The interval is given in milliseconds
+          Interval range: 50 to 5000. Default: 1000
+          Max events per interval range: 1 to 1000. Default: 100  -->
+    <player_triggered_event_interval>1000</player_triggered_event_interval>
+    <max_player_triggered_events_per_interval>100</max_player_triggered_events_per_interval>
+	
+	<!-- This parameter determines if resource client files that end in PNG, DFF and TXD should be checked for errors;
+          Values: 0 - Off, 1 - Enabled.  Default - 1 -->
+    <resource_client_file_checks>1</resource_client_file_checks>
+
+    <!-- Specifies the module(s) which are loaded with the server. To load several modules, add more <module>
+         parameter(s). Optional parameter. -->
+    <!-- <module src="sample_win32.dll"/> -->
+    <!-- <module src="sample_linux.so"/> -->
+    
+    <!-- ============================================================================ -->
+<!-- NITRORPG RESOURCES - ZASOBY SERWEROWE                                       -->
+<!-- Kolejność uruchamiania jest krytyczna!                                      -->
+<!-- ============================================================================ -->
+
+<!-- ====================== PODSTAWOWE ZASOBY ====================== -->
+
+    <!-- Bazy danych -->
+    <resource src="[Serwer]/nrpg_db" startup="1" protected="1"/>
+    <resource src="[Serwer]/DB" startup="1" protected="1"/>
+    <resource src="[Serwer]/DB2" startup="1" protected="1"/>
+
+    <!-- Rdzeń systemu -->
+    <resource src="[Serwer]/nrpg_core" startup="1" protected="1"/>
+    <resource src="[Serwer]/nrpg_lib" startup="1" protected="1"/>
+
+    <!-- System logowania -->
+    <resource src="[Serwer]/nrpg_newlogin" startup="1" protected="1"/>
+
+    <!-- Interfejs użytkownika -->
+    <resource src="[Serwer]/nrpg_interface" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_hud" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_dashboard" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_scoreboard" startup="1" protected="0"/>
+
+    <!-- Systemy pojazdów -->
+    <resource src="[Serwer]/nrpg_vehicles" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_speedo" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_licznik" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_carsell" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_salon" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_storevehicle" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_syrenki" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_handlings" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_carTint" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_carTrunk" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_vehicleAddons" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_clearcars" startup="1" protected="0"/>
+
+    <!-- Systemy gracza -->
+    <resource src="[Serwer]/nrpg_levels" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_userpanel" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_anims" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_clothes" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_przebieralnia" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_nametags" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_avatars" startup="1" protected="0"/>
+
+    <!-- Systemy ekonomiczne -->
+    <resource src="[Serwer]/nrpg_atms" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_24shop" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_trade" startup="1" protected="0"/>
+
+    <!-- Systemy nieruchomości -->
+    <resource src="[Serwer]/nrpg_houseSystem" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_houseBuilder" startup="1" protected="0"/>
+
+    <!-- Systemy urzędu -->
+    <resource src="[Serwer]/nrpg_urzad" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_license" startup="1" protected="0"/>
+
+    <!-- Systemy mechaniczne -->
+    <resource src="[Serwer]/nrpg_mechanic" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_wulkanizacja" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_zlomowisko" startup="1" protected="0"/>
+
+    <!-- Systemy stacji -->
+    <resource src="[Serwer]/nrpg_stations" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_charger" startup="1" protected="0"/>
+
+    <!-- Systemy tuningu -->
+    <resource src="[Serwer]/nrpg_neons" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_paintjobs" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_components" startup="1" protected="0"/>
+    <resource src="[Tuning]/nrpg_tuning" startup="1" protected="0"/>
+
+    <!-- Systemy GPS i mapy -->
+    <resource src="gps" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_radar" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_radarArea" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_markers" startup="1" protected="0"/>
+
+    <!-- Systemy interakcji -->
+    <resource src="[Serwer]/nrpg_interakcja" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_buttons" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_interiors" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_cuboid" startup="1" protected="0"/>
+
+    <!-- Frakcje -->
+    <resource src="[Frakcje]/[SAPD]/nrpg_factionsapd_skins" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[SARA]/nrpg_faction_sara" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[mains]/nrpg_faction_megaphone" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[SAFD]/nrpg_factionsafd_fire" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[mains]/nrpg_faction_trafficobstruction" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[SAFD]/nrpg_faction_safd" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[mains]/nrpg_faction_repair" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[SAFD]/nrpg_factionsafd_fallentrees" startup="1" protected="0"/>
+    <resource src="[Frakcje]/nrpg-suszarka-sapd" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[mains]/nrpg_faction_chat" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[mains]/nrpg_faction_tape" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[SAPD]/nrpg_factionsapd_handcuffs" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[mains]/nrpg_faction_break" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[mains]/nrpg_faction_codes" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[SAPD]/nrpg_factionsapd_mandate" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[SARA]/nrpg_faction_wheellock" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[mains]/nrpg__checkFaction" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[SAFD]/nrpg_factionsafd_torbaR1" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[mains]/nrpg_faction_reports" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[mains]/nrpg_faction_doors" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[SAPD]/nrpg_factionsapd_policelights" startup="1" protected="0"/>
+    <resource src="[Frakcje]/nrpg_factionGUI" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[SAPD]/nrpg_factionsapd_taser" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[SAPD]/nrpg_factionsapd_weapon" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[SAPD]/nrpg_factionsapd_jail" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[SAFD]/nrpg_factionsafd_drabina" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[SAPD]/nrpg_faction_sapd" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[SARA]/nrpg_suszarkaSARA" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[mains]/nrpg_faction_core" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[mains]/nrpg_faction_panel" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[SAPD]/nrpg_factionsapd_quiver" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[mains]/nrpg_faction_sirens" startup="1" protected="0"/>
+    <resource src="[Frakcje]/obiekty-es" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[SAFD]/nrpg_factionsafd_miejscawóz" startup="1" protected="0"/>
+    <resource src="[Frakcje]/[SARA]/nrpg_faction_parkingpolicyjny" startup="1" protected="0"/>
+
+    <!-- Organizacje -->
+    <resource src="[Organizacje]/[marihuana]/nrpg_diler" startup="1" protected="0"/>
+    <resource src="[Organizacje]/nrpg_createorg" startup="1" protected="0"/>
+    <resource src="[Organizacje]/[marihuana]/nrpg_modelMarihuana" startup="1" protected="0"/>
+    <resource src="[Organizacje]/nrpg_panelorg" startup="1" protected="0"/>
+    <resource src="[Organizacje]/[marihuana]/nrpg_jobMarihuana" startup="1" protected="0"/>
+
+    <!-- Prace -->
+    <resource src="[Prace]/nrpg_jobCore" startup="1" protected="0"/>
+    <resource src="[Prace]/nrpg_jobMagazynier" startup="1" protected="0"/>
+    <resource src="[Organizacje]/[marihuana]/nrpg_jobMarihuana" startup="1" protected="0"/>
+
+    <!-- Systemy czatu i komunikacji -->
+    <resource src="[Serwer]/nrpg_chatInfo" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_clearChat" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_3dtext" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_editbox" startup="1" protected="0"/>
+
+    <!-- Systemy multimedia -->
+    <resource src="[Serwer]/nrpg_newstereo" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_radio" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_voice" startup="1" protected="0"/>
+
+    <!-- Systemy rozrywki -->
+    <resource src="[Serwer]/nrpg_ruleta" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_prezent" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_prezenty" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_premiumads" startup="1" protected="0"/>
+
+    <!-- Systemy administracji -->
+    <resource src="[Serwer]/nrpg_admin" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_adminPanel" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_helppanel" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_whitelist" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_public" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_getpos" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_op" startup="1" protected="0"/>
+    <resource src="[admin]/acpanel" startup="1" protected="0"/>
+    <resource src="[admin]/admin" startup="1" protected="0"/>
+    <resource src="[admin]/admin2" startup="1" protected="0"/>
+    <resource src="[admin]/runcode" startup="1" protected="0"/>
+
+    <!-- Systemy bezpieczeństwa -->
+    <resource src="[Serwer]/nrpg_antycheat" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_antysyrenkiFBI" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_antywybuchcpn" startup="1" protected="0"/>
+
+    <!-- Discord Integration -->
+    <resource src="[DC]/discord" startup="1" protected="0"/>
+    <resource src="[DC]/discord-events" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_discord" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_dcconnect" startup="1" protected="0"/>
+
+    <!-- Systemy dodatkowe -->
+    <resource src="[Serwer]/nrpg_weather" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_snow" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_fog" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_fotoradary" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_playerblips" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_abs_system" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_customseats" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_deletevmax" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_dryer" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_firstpearson" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_glue" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_ogranicznik" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_object_preview" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_peds" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_reload" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_style" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_variants" startup="1" protected="0"/>
+    <resource src="[Serwer]/nrpg_autostart" startup="1" protected="0"/>
+
+    <!-- Boty i Deathmatch -->
+    <resource src="[Deathmatch]/slothbot" startup="1" protected="0"/>
+    <resource src="[Deathmatch]/nrpg_bots" startup="1" protected="0"/>
+    <resource src="[Deathmatch]/nrpg_strefaDM" startup="1" protected="0"/>
+
+    <!-- Mapy -->
+    <resource src="[Mapy]/[LosSantos]/[main]/map_clothesLS" startup="1" protected="0"/>
+    <resource src="[Mapy]/[LosSantos]/[interiors]/map_interior_Magazynier" startup="1" protected="0"/>
+    <resource src="[Mapy]/[LosSantos]/[main]/map_mechanikLS" startup="1" protected="0"/>
+    <resource src="[Mapy]/[LosSantos]/[job]/map_pksLS" startup="1" protected="0"/>
+    <resource src="[Mapy]/[LosSantos]/[job]/map_kurierLS" startup="1" protected="0"/>
+    <resource src="[Mapy]/[LosSantos]/[main]/map_spawnSF" startup="1" protected="0"/>
+    <resource src="[Mapy]/[LosSantos]/[main]/map_spawnLS" startup="1" protected="0"/>
+    <resource src="[Mapy]/[LosSantos]/[door]/nrpg_doors" startup="1" protected="0"/>
+    <resource src="[Mapy]/[LosSantos]/[main]/map_mechanikLSprzechoLSppLS" startup="1" protected="0"/>
+    <resource src="[Mapy]/[LosSantos]/[job]/map_sweepersLS" startup="1" protected="0"/>
+    <resource src="[Mapy]/[LosSantos]/[main]/map_ppLSprzechoLS" startup="1" protected="0"/>
+    <resource src="[Mapy]/[LosSantos]/[main]/map_urzadLS" startup="1" protected="0"/>
+    <resource src="[Mapy]/[LosSantos]/[main]/map_parkingSpawnLS" startup="1" protected="0"/>
+    <resource src="[Mapy]/[LosSantos]/[interiors]/map_interior_license" startup="1" protected="0"/>
+    <resource src="[Mapy]/[LosSantos]/[main]/map_magazynLS" startup="1" protected="0"/>
+    <resource src="[Mapy]/[LosSantos]/[job]/map_magazynierLS" startup="1" protected="0"/>
+    <resource src="[Mapy]/[LosSantos]/[interiors]/map_interior_clothes" startup="1" protected="0"/>
+    <resource src="[Mapy]/[LosSantos]/[safd]/map_faction_bazasafdb" startup="1" protected="0"/>
+
+    <!-- Modele -->
+    <resource src="[Modele]/[skins]/nrpg_skins_sapd" startup="1" protected="0"/>
+    <resource src="[Modele]/[cars]/[sapd]/nrpg_car_policefbi" startup="1" protected="0"/>
+    <resource src="[Modele]/[bulidings]/nrpg_model_magazyn" startup="1" protected="0"/>
+    <resource src="[Modele]/[skins]/nrpg_skin_lajcior2115noniezle" startup="1" protected="0"/>
+    <resource src="[Modele]/[cars]/[safd]/nrpg_car_ladder" startup="1" protected="0"/>
+    <resource src="[Modele]/[cars]/[safd]/nrpg_car_gba" startup="1" protected="0"/>
+    <resource src="[Modele]/[skins]/nrpg_skins_premium" startup="1" protected="0"/>
+    <resource src="[Modele]/[bulidings]/nrpg_model_license" startup="1" protected="0"/>
+    <resource src="[Modele]/[skins]/nrpg_skins_safd" startup="1" protected="0"/>
+    <resource src="[Modele]/[cars]/nrpg_variants_elegy" startup="1" protected="0"/>
+    <resource src="[Modele]/[objects]/nrpg_model_slupek" startup="1" protected="0"/>
+    <resource src="[Modele]/[objects]/nrpg_model_S" startup="1" protected="0"/>
+    <resource src="[Modele]/[cars]/[sapd]/nrpg_car_enforcer" startup="1" protected="0"/>
+    <resource src="[Modele]/[objects]/nrpg_model_komisariatLS" startup="1" protected="0"/>
+    <resource src="[Modele]/[cars]/nrpg_car_uranusfix" startup="1" protected="0"/>
+    <resource src="[Modele]/[objects]/nrpg_model_dockbar" startup="1" protected="0"/>
+    <resource src="[Modele]/[bulidings]/nrpg_model_clothes" startup="1" protected="0"/>
+    <resource src="[Modele]/[bulidings]/nrpg_model_mechanik" startup="1" protected="0"/>
+    <resource src="[Modele]/[objects]/nrpg_model_mechanic" startup="1" protected="0"/>
+    <resource src="[Modele]/[objects]/nrpg_model_suszarka" startup="1" protected="0"/>
+    <resource src="[Modele]/[objects]/nrpg_model_nosze" startup="1" protected="0"/>
+    <resource src="[Modele]/[cars]/[sara]/nrpg_variants_dft" startup="1" protected="0"/>
+    <resource src="[Modele]/[wheels]/nrpg_wheels" startup="1" protected="0"/>
+    <resource src="[Modele]/[cars]/[sapd]/nrpg_car_policecop" startup="1" protected="0"/>
+    <resource src="[Modele]/[devpaczka]/nrpg_objects_devpaczka" startup="1" protected="0"/>
+    <resource src="[Modele]/[cars]/nrpg_exotic_cars" startup="1" protected="0"/>
+    <resource src="[Modele]/[bulidings]/[factions]/nrpg_model_safdb" startup="1" protected="0"/>
+    <resource src="[Modele]/[objects]/nrpg_object_pbpump" startup="1" protected="0"/>
+
+    <!-- Shadery -->
+
+    <!-- Community -->
+    <resource src="[community]/community-pedshadow" startup="1" protected="0"/>
+    <resource src="[community]/community-radio" startup="1" protected="0"/>
+    <resource src="[community]/ankieta" startup="1" protected="0"/>
+    <resource src="[community]/bone_attach" startup="1" protected="0"/>
+    <resource src="[community]/buttons" startup="1" protected="0"/>
+    <resource src="[community]/community-godmode" startup="1" protected="0"/>
+    <resource src="[community]/community-editSiren" startup="1" protected="0"/>
+    <resource src="[community]/community-dmvehicle" startup="1" protected="0"/>
+    <resource src="[community]/community-tp_z_derby" startup="1" protected="0"/>
+    <resource src="[community]/ukrytecmd" startup="1" protected="0"/>
+    <resource src="[community]/trasy" startup="1" protected="0"/>
+    <resource src="[community]/bengines" startup="1" protected="0"/>
+
+    <!-- Web Admin -->
+    <resource src="[admin]/ipb" startup="1" protected="0"/>
+
+</config>

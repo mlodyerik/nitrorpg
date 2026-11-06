@@ -53,12 +53,20 @@
    <!-- ============================================================================ -->
    <!-- NITRORPG CUSTOM GROUPS - Grupy uprawnień dla zasobów NitroRPG              -->
    <!-- ============================================================================ -->
+   
+   <!-- AUTOSTART - Najważniejszy zasób z pełnymi uprawnieniami do startowania -->
+   <group name="NitroRPG_Autostart">
+      <acl name="AutostartACL" />
+      <object name="resource.[Serwer]/nrpg_autostart" />
+   </group>
+   
    <group name="NitroRPG_Database">
       <acl name="DatabaseACL" />
       <object name="resource.[Serwer]/nrpg_db" />
       <object name="resource.[Serwer]/DB" />
       <object name="resource.[Serwer]/DB2" />
    </group>
+   
    <group name="NitroRPG_Core">
       <acl name="CoreACL" />
       <object name="resource.[Serwer]/nrpg_core" />
@@ -68,6 +76,7 @@
       <object name="resource.[Serwer]/nrpg_admin" />
       <object name="resource.[Serwer]/nrpg_adminPanel" />
    </group>
+   
    <group name="NitroRPG_Factions">
       <acl name="FactionACL" />
    </group>
@@ -305,6 +314,24 @@
    <!-- ============================================================================ -->
    <!-- NITRORPG CUSTOM ACL - Dodatkowe uprawnienia dla zasobów NitroRPG           -->
    <!-- ============================================================================ -->
+   
+   <!-- AUTOSTART ACL - Pełne uprawnienia do zarządzania zasobami -->
+   <acl name="AutostartACL">
+      <right name="general.ModifyOtherObjects" access="true" />
+      <right name="general.http" access="true" />
+      <right name="function.startResource" access="true" />
+      <right name="function.stopResource" access="true" />
+      <right name="function.restartResource" access="true" />
+      <right name="function.getResources" access="true" />
+      <right name="function.getResourceFromName" access="true" />
+      <right name="function.getResourceName" access="true" />
+      <right name="function.getResourceState" access="true" />
+      <right name="function.refreshResources" access="true" />
+      <right name="function.outputDebugString" access="true" />
+      <right name="function.setTimer" access="true" />
+      <right name="function.getThisResource" access="true" />
+   </acl>
+   
    <acl name="DatabaseACL">
       <right name="general.ModifyOtherObjects" access="true" />
       <right name="function.dbConnect" access="true" />
@@ -315,6 +342,7 @@
       <right name="function.dbPrepareString" access="true" />
       <right name="function.executeSQLQuery" access="true" />
    </acl>
+   
    <acl name="CoreACL">
       <right name="general.ModifyOtherObjects" access="true" />
       <right name="general.http" access="true" />
@@ -331,6 +359,7 @@
       <right name="function.stopResource" access="true" />
       <right name="function.restartResource" access="true" />
    </acl>
+   
    <acl name="FactionACL">
       <right name="general.ModifyOtherObjects" access="true" />
       <right name="function.setPlayerMuted" access="true" />
