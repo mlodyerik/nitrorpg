@@ -1,5 +1,29 @@
+-- Funkcja zamykająca panel (używana przez F5, ESC i komendę)
+function closeUserPanel()
+    if main.toggleGUI == true then
+        removeEventHandler("onClientRender", root, main.renderDashboard)
+        main.toggleGUI = false
+        exports["nrpg_editbox"]:destroyCustomEditbox('friend:chat')
+        exports["nrpg_interface"]:destroyCustomEditbox('friend:request')
+        exports["nrpg_interface"]:destroyCustomEditbox('verify:account')
+		exports["nrpg_interface"]:destroyCustomEditbox('account:nick')
+        exports["nrpg_interface"]:destroyCustomEditbox('account:password')
+        exports["nrpg_interface"]:destroyCustomEditbox('account:passwordnew')
+		exports["nrpg_interface"]:destroyCustomEditbox('account:serial')
+        exports["nrpg_interface"]:destroyCustomEditbox('account:passwordnew2')
+        main.actualPage = "Główna"
+        triggerServerEvent("showPlayerInfo", localPlayer)
+        showCursor(false)
+        toggleVehicle(false)
+        main.rolling = false
+        main.rollingEnd = false
+        outputChatBox("#00FF00[NitroRPG]#FFFFFF Panel użytkownika został zamknięty.", 255, 255, 255, true)
+    end
+end
+
+-- Przycisk F5 - otwiera/zamyka panel
 bindKey("F5", "down", function()
-    if not getElementData(localPlayer, "player:sid") or main.rolling == true then return end
+    if not getElementData(localPlayer, "player:sid") then return end
     if main.toggleGUI == false then
         main.loadPlayerInfo()
         addEventHandler("onClientRender", root, main.renderDashboard)
@@ -33,21 +57,18 @@ bindKey("F5", "down", function()
 			loadAllFriendsAvatars()
 		end, 100, 1)
     else
-        removeEventHandler("onClientRender", root, main.renderDashboard)
-        main.toggleGUI = false
-        exports["nrpg_editbox"]:destroyCustomEditbox('friend:chat')
-        exports["nrpg_interface"]:destroyCustomEditbox('friend:request')
-        exports["nrpg_interface"]:destroyCustomEditbox('verify:account')
-		exports["nrpg_interface"]:destroyCustomEditbox('account:nick')
-        exports["nrpg_interface"]:destroyCustomEditbox('account:password')
-        exports["nrpg_interface"]:destroyCustomEditbox('account:passwordnew')
-		exports["nrpg_interface"]:destroyCustomEditbox('account:serial')
-        exports["nrpg_interface"]:destroyCustomEditbox('account:passwordnew2')
-        main.actualPage = "Główna"
-        triggerServerEvent("showPlayerInfo", localPlayer)
-        showCursor(false)
-        toggleVehicle(false)
+        closeUserPanel()
     end
+end)
+
+-- Przycisk ESC - zawsze zamyka panel
+bindKey("Escape", "down", function()
+    closeUserPanel()
+end)
+
+-- Komenda /closepanel - awaryjne zamknięcie panelu
+addCommandHandler("closepanel", function()
+    closeUserPanel()
 end)
 
 function isScreenElementInPosition(x1, y1, w1, h1, x2, y2, w2, h2)

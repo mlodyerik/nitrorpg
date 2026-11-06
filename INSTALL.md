@@ -385,3 +385,27 @@ Po wykonaniu wszystkich kroków powinieneś mieć:
 *Dokument stworzony: 2026-11-06*  
 *Wersja: 1.0*  
 *Kompatybilność: MTA:SA 1.5.9+, MySQL 5.7+, MariaDB 10.3+*
+
+
+---
+
+## 📚 Dodatkowa dokumentacja
+
+W repozytorium znajdują się następujące pliki dokumentacji:
+
+- **`INSTALL.md`** (ten plik) - Pełna instrukcja instalacji serwera
+- **`README.md`** - Ogólny opis projektu i systemy serwera
+- **`RAPORT_PRZYGOTOWANIA.md`** - Szczegółowy raport przygotowania serwera (analiza 213 zasobów)
+- **`NAPRAWA_BAZY.md`** - Instrukcja naprawy problemów z bazą danych (brakujące kolumny)
+- **`NAPRAWA_PANELU.md`** - ⚠️ WAŻNE: Naprawa problemu z zawieszonym panelem użytkownika (F5)
+
+### Najczęstsze problemy:
+
+1. **Panel użytkownika (F5) nie zamyka się** → Zobacz `NAPRAWA_PANELU.md`
+2. **Błędy SQL "Unknown column"** → Zobacz `NAPRAWA_BAZY.md`
+3. **Serwer nie startuje** → Sprawdź `server/mods/deathmatch/logs/`
+4. **Błąd "Line 343: Error reading end tag"** → ACL już naprawiony w repozytorium
+
+---
+
+**Powodzenia z uruchomieniem serwera NitroRPG! 🎮**
