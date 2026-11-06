@@ -57,24 +57,24 @@
    <!-- AUTOSTART - Najważniejszy zasób z pełnymi uprawnieniami do startowania -->
    <group name="NitroRPG_Autostart">
       <acl name="AutostartACL" />
-      <object name="resource.[Serwer]/nrpg_autostart" />
+      <object name="resource.nrpg_autostart" />
    </group>
    
    <group name="NitroRPG_Database">
       <acl name="DatabaseACL" />
-      <object name="resource.[Serwer]/nrpg_db" />
-      <object name="resource.[Serwer]/DB" />
-      <object name="resource.[Serwer]/DB2" />
+      <object name="resource.nrpg_db" />
+      <object name="resource.DB" />
+      <object name="resource.DB2" />
    </group>
    
    <group name="NitroRPG_Core">
       <acl name="CoreACL" />
-      <object name="resource.[Serwer]/nrpg_core" />
-      <object name="resource.[Serwer]/nrpg_lib" />
-      <object name="resource.[Serwer]/nrpg_newlogin" />
-      <object name="resource.[Serwer]/nrpg_interface" />
-      <object name="resource.[Serwer]/nrpg_admin" />
-      <object name="resource.[Serwer]/nrpg_adminPanel" />
+      <object name="resource.nrpg_core" />
+      <object name="resource.nrpg_lib" />
+      <object name="resource.nrpg_newlogin" />
+      <object name="resource.nrpg_interface" />
+      <object name="resource.nrpg_admin" />
+      <object name="resource.nrpg_adminPanel" />
    </group>
    
    <group name="NitroRPG_Factions">
