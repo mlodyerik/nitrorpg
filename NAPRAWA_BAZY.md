@@ -45,16 +45,7 @@ Skopiuj i wklej zawartość pliku:
 database/UPDATE_fix_missing_columns.sql
 ```
 
-LUB wklej bezpośrednio ten kod:
-```sql
-USE `nitrorpg`;
-
-ALTER TABLE `pystories_houses` 
-ADD COLUMN `owner_name` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL AFTER `owner`,
-ADD COLUMN `interiorSize` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT 'small' AFTER `dimension`,
-ADD COLUMN `date` datetime DEFAULT NULL AFTER `rent`,
-ADD KEY `date` (`date`);
-```
+**UWAGA:** Skrypt jest bezpieczny - sprawdza czy kolumny już istnieją i nie wyrzuci błędu przy ponownym uruchomieniu!
 
 #### Krok 5: Wykonaj zapytanie
 Kliknij **"Wykonaj"** na dole strony
@@ -159,6 +150,10 @@ Jeśli nadal masz problemy:
 
 ---
 
+**WAŻNE:** Jeśli widzisz błąd `#1060 - Duplicate column name`, to znaczy że kolumny już zostały dodane. To jest OK - zignoruj ten błąd lub użyj najnowszej wersji skryptu `UPDATE_fix_missing_columns.sql` która automatycznie sprawdza czy kolumny istnieją.
+
+---
+
 **Data aktualizacji:** 2026-11-06  
-**Wersja:** 1.1  
+**Wersja:** 1.2  
 **Status:** Naprawione i przetestowane
