@@ -25,7 +25,17 @@ main = {
 
 }
 
-main.renderUI = function()
+-- WYŁĄCZONE - Ten skrypt pokazywał testowe dane poprzedniego właściciela (TheNoobisty)
+-- i renderował się ZAWSZE na środku ekranu!
+-- TODO: Przepisać ten skrypt żeby pobierał PRAWDZIWE dane gracza z bazy!
+
+main = {
+    toggleGUI = false,
+}
+
+-- Cały render WYŁĄCZONY
+--[[
+addEventHandler("onClientRender", root, main.renderUI)
     local x, y, w, h = dashboardPos.x, dashboardPos.y, math.floor(100/zoom), math.floor(50/zoom)
 
 
@@ -71,8 +81,9 @@ main.renderUI = function()
             dxDrawText(v[2], x+math.floor(575/zoom), y+math.floor(60/zoom)+offsetY, x+w, y+h, tocolor(255, 255, 255, 200), 1/zoom, exports.nrpg_interface:getGUIFont('light10'), "left", "top", false, false, false, false, false)
         end
     end   
-end
-addEventHandler("onClientRender", root, main.renderUI)
+]]
+
+outputDebugString("[nrpg_dashboard] WYŁĄCZONY - Ten zasób jest niekompletny i pokazywał testowe dane!", 2)
 
 bindKey("F5", "down", function()
     if main.toggleGUI == false then

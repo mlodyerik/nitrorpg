@@ -11,11 +11,21 @@ addEvent("core:spawnPlayer", true)
 addEventHandler("core:spawnPlayer", root, function()
 	local pos=getElementData(source,"player:spawn")
 	if not pos then return end
-	fadeCamera(source, true)
+	
+	-- NAPRAWIONE: fadeCamera MUSI być PRZED spawnPlayer!
+	fadeCamera(source, false) -- Najpierw ciemny ekran
+	
+	-- Spawn gracza
 	spawnPlayer(source, pos[1], pos[2], pos[3])
 	setElementDimension(source, pos[5] or 0)
 	setElementInterior(source, pos[4] or 0)
-	setCameraTarget(source,source)
+	
+	-- TERAZ fade in - gracz już jest zespawnowany!
+	setTimer(function()
+		fadeCamera(source, true)
+		setCameraTarget(source,source)
+	end, 100, 1)
+	
 	toggleControl(source,"fire", false)
 	toggleControl(source,"aim_weapon", false)
 	loadPlayerData(source)
