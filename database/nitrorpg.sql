@@ -213,17 +213,21 @@ CREATE TABLE `pystories_houses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
   `owner` int(11) DEFAULT NULL,
+  `owner_name` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `price` int(11) NOT NULL DEFAULT 0,
   `pos` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `interior` int(11) NOT NULL DEFAULT 0,
   `dimension` int(11) NOT NULL DEFAULT 0,
+  `interiorSize` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT 'small',
   `interiorObjects` text COLLATE utf8mb4_unicode_ci,
   `interiorWalls` text COLLATE utf8mb4_unicode_ci,
   `interiorFloor` text COLLATE utf8mb4_unicode_ci,
   `rent` text COLLATE utf8mb4_unicode_ci,
+  `date` datetime DEFAULT NULL,
   `locked` tinyint(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
-  KEY `owner` (`owner`)
+  KEY `owner` (`owner`),
+  KEY `date` (`date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1;
 
 -- ============================================================================
