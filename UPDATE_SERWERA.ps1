@@ -39,11 +39,11 @@ try {
     Write-Host ""
     Write-Host "BLAD: Git nie jest zainstalowany lub niedostepny!" -ForegroundColor Red
     Write-Host ""
-    Write-Host "ROZWIĄZANIE:" -ForegroundColor Yellow
-    Write-Host "1. Sprawdź czy Git jest zainstalowany:" -ForegroundColor White
-    Write-Host "   - Otwórz Panel sterowania → Programy → Git" -ForegroundColor White
+    Write-Host "ROZWIAZANIE:" -ForegroundColor Yellow
+    Write-Host "1. Sprawdz czy Git jest zainstalowany:" -ForegroundColor White
+    Write-Host "   - Otworz Panel sterowania - Programy - Git" -ForegroundColor White
     Write-Host ""
-    Write-Host "2. Jeśli NIE jest zainstalowany:" -ForegroundColor White
+    Write-Host "2. Jesli NIE jest zainstalowany:" -ForegroundColor White
     Write-Host "   - Pobierz ze strony: https://git-scm.com/download/win" -ForegroundColor White
     Write-Host "   - Zainstaluj (klikaj Next wszedzie)" -ForegroundColor White
     Write-Host "   - Zaznacz opcje: Add Git to PATH" -ForegroundColor Cyan
