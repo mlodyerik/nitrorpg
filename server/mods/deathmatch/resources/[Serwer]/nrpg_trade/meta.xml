@@ -1,0 +1,13 @@
+<meta>
+
+<script src='client_gui.lua' type='client' cache='false'/>
+<script src='server_places.lua' type='server'/>
+
+<file src='images/background.png' type='client'/>
+<file src='images/car.png' type='client'/>
+<file src='images/money.png' type='client'/>
+<file src='images/nothing.png' type='client'/>
+<file src='images/przelew.png' type='client'/>
+<file src='images/off.png' type='client'/>
+
+</meta>

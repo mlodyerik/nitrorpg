@@ -1,0 +1,11 @@
+<meta>
+
+    <script src="s.lua" type="server"/>
+    <script src="c.lua" type="client" cache="false"/>
+
+    <file src="img/drive.png"/>
+    <file src="img/buy.png"/>
+    <file src="img/card.png"/>
+    <file src="img/circle.png"/>
+
+</meta>

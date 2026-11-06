@@ -1,0 +1,56 @@
+<meta>
+
+    <!-- files -->
+    <script src="animations.lua" type="client" cache="false"/>
+    <script src="c.lua" type="client" cache="false"/>
+    <script src="c_chatbox.lua" type="client" cache="false"/>
+    <script src="c_libary.lua" type="client" cache="false"/>
+    <script src="c_functions.lua" type="client" cache="false"/>
+    <script src="s.lua" type="server"/>
+
+    <export function="drawUserAvatar" type="client"/>
+
+    <file src='files/Roboto-Regular.ttf'/>
+    <file src='files/mask.png'/>
+    <file src='files/masked.fx'/>
+    <file src="files/tex_matrix.fx"/>
+
+    <!-- icons -->
+    <file src="icons/diamond_icon.png"/>
+    <file src="icons/friend_icon.png"/>
+    <file src="icons/home_icon.png"/>
+    <file src="icons/pack_icon.png"/>
+    <file src="icons/promo_icon.png"/>
+    <file src="icons/settings_icon.png"/>
+    <file src="icons/veh_icon.png"/>
+    <file src="icons/verify_icon.png"/>
+    <file src="icons/message_icon.png"/>
+    <file src="icons/nitro_logo.png"/>
+    <file src="icons/account_info.png"/>
+    <file src="icons/delfriend_icon.png"/>
+    <file src="icons/settings_background.png"/>
+    <file src="icons/discord_background.png"/>
+    <file src="icons/security_background.png"/>
+    <file src="icons/like_icon.png"/>
+    <file src="icons/empty_icon.png"/>
+    <file src="icons/messages_icon.png"/>
+    <file src="icons/invite_icon.png"/>
+    <file src="icons/conversation_icon.png"/>
+    <file src="icons/close_icon.png"/>
+    <file src="icons/light_icon.png"/>
+    <file src="icons/checkbox_clicked.png"/>
+    <file src="icons/checkbox_empty.png"/>
+    <file src="icons/discord_icon.png"/>
+    <file src="icons/heart_icon.png"/>
+    <file src="icons/sunglasses_emoji.png"/>
+    <file src="icons/poop_emoji.png"/>
+    <file src="icons/heartface_emoji.png"/>
+    <file src="icons/think_emoji.png"/>
+    <file src="icons/money_icon.png"/>
+    <file src="icons/car2_icon.png"/>
+    <file src="icons/motorbike_icon.png"/>
+    <file src="icons/pack_background.png"/>
+    <file src="icons/packshadow_icon.png"/>
+    <file src="icons/user_icon.png"/>
+    <file src="icons/target.png"/>
+</meta>

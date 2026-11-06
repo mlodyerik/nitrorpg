@@ -1,0 +1,7 @@
+<meta>
+
+    <script src="c.lua" type="client" cache="false"/>
+    <script src="useful.lua" type="client" cache="false"/>
+
+
+</meta>

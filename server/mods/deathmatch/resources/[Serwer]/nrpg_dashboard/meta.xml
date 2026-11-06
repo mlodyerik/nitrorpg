@@ -1,0 +1,14 @@
+<meta>
+
+    <script src="c_main.lua" cache="false" type="client"/>
+    <script src="s_dashboard.lua" type="server"/>
+    <script src="c_libary.lua" cache="false" type="client"/>
+
+    <file src="img/account_icon.png"/>
+    <file src="img/home_icon.png"/>
+    <file src="img/license_icon.png"/>
+    <file src="img/settings_icon.png"/>
+    <file src="img/vehicle_icon.png"/>
+    <file src="img/promo_icon.png"/>
+
+</meta>

@@ -1,0 +1,7 @@
+<meta>
+
+  <file src='31.dff' />
+  <file src='31.txd' />
+
+  <script src="replace.lua" type="client" />
+</meta>

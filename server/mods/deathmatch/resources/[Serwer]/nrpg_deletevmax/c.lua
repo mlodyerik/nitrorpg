@@ -1,0 +1,1 @@
+setWorldSpecialPropertyEnabled( "extraairresistance", false )

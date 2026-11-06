@@ -1,0 +1,9 @@
+<meta>
+	<script src="replace.lua" type="client" cache="false" />
+	<file src="SAPDHQ.dff" />
+	<file src="road_lawn06.dff" />
+	<file src="road_lawn26.dff" />
+	<file src="SAPDHQ.txd" />
+	<file src="roads_lawn.txd" />
+	<file src="SAPDHQ.col" />
+</meta>

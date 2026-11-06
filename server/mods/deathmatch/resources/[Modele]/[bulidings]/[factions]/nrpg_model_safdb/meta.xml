@@ -1,0 +1,6 @@
+<meta> 
+    <script src="replace.lua" type="client" cache="false" />
+    <file src="safd2.dff"/> 
+    <file src="safd2.col"/> 
+    <file src="safd2.txd"/> 
+</meta>

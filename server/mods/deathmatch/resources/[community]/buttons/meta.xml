@@ -1,0 +1,21 @@
+<meta>
+
+<script src="c.lua" type="client" cache="false"/>
+
+<export function="createCustomWindow" type="client"/>
+
+<export function="createCustomButton" type="client"/>
+<export function="createCustomText" type="client"/>
+<export function="createCustomText2" type="client"/>
+<export function="createCustomImageWindow" type="client"/>
+<export function="createCustomNotification" type="client"/>
+<export function="onCreateProgress" type="client"/>
+
+<file src="f2.ttf"/>
+<file src="f.ttf"/>
+<file src="window.png"/>
+<file src="button.png"/>
+<file src="button_off.png"/>
+<file src="progress.png"/>
+<download_priority_group>1</download_priority_group>
+</meta>

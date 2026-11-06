@@ -1,0 +1,7 @@
+<meta>
+   <script src="replace.lua" type="client" />
+   <script src="remove.lua" type="server" />
+  <file src="mechanik.txd" />
+  <file src="mechanik.col" />
+  <file src="mechanik.dff" />
+</meta>

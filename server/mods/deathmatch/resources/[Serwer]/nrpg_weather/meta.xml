@@ -1,0 +1,13 @@
+<meta> 
+
+    <script src="c_weather.lua" type="client" cache="false"/>
+    <script src="c_functions.lua" type="client" cache="false"/>
+    <script src="animations.lua" type="client" cache="false"/>
+    <script src="s_weather.lua" type="server"/>
+
+
+    <file src="img/promienie.png"/>
+    <file src="img/srodek.png"/>
+    <file src="img/cloud.png"/>
+
+</meta>

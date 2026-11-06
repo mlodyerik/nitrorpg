@@ -1,0 +1,19 @@
+<meta>
+
+    <script src="c.lua" cache="false" type="client"/>
+    <script src="s.lua" type="server"/>
+    <script src="libs/colorpicker.lua" cache="false" type="client"/>
+
+    <file src="img/plate.png"/>
+    <file src="img/nitro.png"/>
+    <file src="img/rims.png"/>
+    <file src="img/car.png"/>
+    <file src="img/engine.png"/>
+    <file src="img/palette.png"/>
+    <file src="img/light.png"/>
+    <file src="img/lights.png"/>
+    <file src="img/engineupgrade.png"/>
+    <file src="img/circle.png"/>
+    <file src="img/speedo.png"/>
+
+</meta>

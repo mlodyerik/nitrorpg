@@ -1,0 +1,15 @@
+<meta>
+
+    <script src="c.lua" type="client" cache="false"/>
+    <script src="animations.lua" type="client" cache="false"/>
+    <script src="s.lua" type="server"/>
+
+    <file src="star.png"/>
+    <file src="star2.png"/>
+    <file src="stop.png"/>
+    <file src="play.png"/>
+    <file src="trash.png"/>
+
+    <export function="toggleStereo" type="client"/>
+
+</meta>

@@ -1,0 +1,15 @@
+<meta>
+
+    <script src="c.lua" type="client" cache="false"/>
+    <script src="c_crosshair.lua" type="client" cache="false"/>
+    <script src="s.lua" type="server"/>
+
+    <file src="img/crown.png"/>
+    <file src="img/all.png"/>
+    <file src="img/crosshair.png"/>
+    <file src="img/vignette.png"/>
+    <file src="img/loading.png"/>
+    <file src="img/lifeline.png"/>
+    <file src="img/skull.png"/>
+    
+</meta>

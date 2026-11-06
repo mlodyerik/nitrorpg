@@ -1,0 +1,9 @@
+<meta>
+<script src="client_skinpd.lua" type="client"/>
+<script src="server_skinpd.lua" type="server"/>
+<file src="font/normal.ttf" />
+<file src="font/bold.ttf" />
+<file src="font/light.ttf" />
+<file src="img/background.png" type="client" />
+<file src="img/cross.png" type="client" />
+</meta>

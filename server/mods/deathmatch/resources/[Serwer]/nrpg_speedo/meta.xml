@@ -1,0 +1,21 @@
+<meta>	
+	<script src="c.lua" type="client" cache="false"/>
+	<script src="libs/circle.lua" type="client" cache="false"/>
+
+	<export function="drawLicznikPodglad" type="client" />
+
+	<file src="img/background.png"/>
+	<file src="img/lights.png"/>
+	<file src="img/engine.png"/>
+	<file src="img/handbrake.png"/>
+	<file src="img/LPG.png"/>
+	<file src="img/numbers.png"/>
+	<file src="img/wskazowka.png"/>
+	<file src="img/fuel.png"/>
+	<file src="img/mileage.png"/>
+	<file src="img/nitro.png"/>
+
+	<file src="libs/circle.fx"/>
+
+    <min_mta_version client="1.3.0-9.04431" server="1.3.0-9.04431" />
+</meta>

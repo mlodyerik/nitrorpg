@@ -1,0 +1,17 @@
+<meta>
+	<oop>true</oop>
+	
+	<!-- functions -->
+	<export function="onRespawnVehicles" type="server" />
+	<export function="onSaveVehicle" type="server" />
+	<export function="onParkVehicle" type="server" />
+	<export function="getVehicleLicense" type="server" />
+	<export function="changeName" type="server" />
+	<export function="changeName" type="client" />
+	<export function="getTuning" type="server" />
+	<export function="addTuning" type="server" />
+	<export function="getTuning" type="client" />
+	<!-- scripts -->
+	<script src="s_vehicles.lua" type="server" />
+	<script src="c_name.lua" type="client" cache="false"/>
+</meta>

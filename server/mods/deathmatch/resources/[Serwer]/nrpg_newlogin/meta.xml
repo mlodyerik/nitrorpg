@@ -1,0 +1,29 @@
+<meta>
+    
+
+    <script src="c_download.lua" type="client" cache="false"/>
+    <script src="s_download.lua" type="server"/>
+
+    <script src="c_login.lua" type="client" cache="false"/>
+    <script src="s_login.lua" type="server"/>
+
+    <script src="animations.lua" type="client" cache="false"/>
+
+
+    <file src="img/background.jpg"/>
+    <file src="img/shadow.png"/>
+    <file src="img/user.png"/>
+    <file src="img/password.png"/>
+    <file src="img/online.png"/>
+    <file src="img/email.png"/>
+    <file src="img/spawnpoint.png"/>
+
+    <file src="libs/tex_matrix.fx"/>
+    <file src="libs/masked.fx"/>
+
+    <file src="img/checkbox_empty.png"/>
+    <file src="img/checkbox_clicked.png"/>
+
+    <file src="music/music.mp3" />
+
+</meta>

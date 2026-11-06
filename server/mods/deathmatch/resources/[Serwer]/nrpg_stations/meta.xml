@@ -1,0 +1,13 @@
+<meta>
+
+    <script src="c.lua" type="client" cache="false"/>
+    <script src="s.lua" type="server"/>
+
+    <file src="img/lpg.png"/>
+    <file src="img/logostation.png"/>
+    <file src="img/diesel.png"/>
+    <file src="img/benzyna.png"/>
+    <file src="img/bateria.png"/>
+
+
+</meta>

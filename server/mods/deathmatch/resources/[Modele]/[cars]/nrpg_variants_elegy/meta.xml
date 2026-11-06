@@ -1,0 +1,6 @@
+<meta>
+    <file src="elegy.dff" />
+    <file src="elegy.txd" />
+    <script src="replace.lua" type="client" />
+	
+</meta>

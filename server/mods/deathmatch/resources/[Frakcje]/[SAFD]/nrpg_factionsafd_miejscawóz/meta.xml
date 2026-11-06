@@ -1,0 +1,6 @@
+<meta>
+<script src="sloty_c219854.lua" type="client" cache="false"/>
+<script src="sloty534219.lua" type="server"/>
+<export function="isInWoz" type="server"/>
+<export function="isInWoz" type="client"/>
+</meta>

@@ -1,0 +1,6 @@
+<meta>
+    <file src="dockbar.txd" />
+    <oop>true</oop>
+    <script src="replace.lua" type="client" />
+	
+</meta>

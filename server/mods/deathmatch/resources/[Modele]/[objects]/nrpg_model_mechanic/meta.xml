@@ -1,0 +1,7 @@
+<meta>
+    <file src="files/mechanik.txd" />
+    <file src="files/mechanik.col" />
+    <file src="files/mechanik.dff" />
+    <oop>true</oop>
+    <script src="c.lua" type="client" />
+</meta>

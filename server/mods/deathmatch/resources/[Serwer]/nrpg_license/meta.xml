@@ -1,0 +1,7 @@
+<meta>
+	<script src="c.lua" cache="false" type="client"/>
+	<script src="s.lua" type="server"/>
+
+
+	<file src="img/category_icon.png"/>
+</meta>

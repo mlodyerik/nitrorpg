@@ -1,0 +1,23 @@
+  <meta> 
+    <script src="nodes.lua" type="client" cache="false"/>
+	<script src="gps.lua" type="client" />
+
+	<!-- GPS Sounds -->
+	<file src="sounds/finish.wav" type="client" />
+	<file src="sounds/recomputing.wav" type="client" />
+	<file src="sounds/turn_left.wav" type="client" />
+	<file src="sounds/turn_right.wav" type="client" />
+	<file src="sounds/then_turn_left.wav" type="client" />
+	<file src="sounds/then_turn_right.wav" type="client" />
+	<file src="sounds/straight.wav" type="client" />
+	<file src="sounds/u_turn.wav" type="client" />
+	<file src="sounds/lost.wav" type="client" />
+	<file src="sounds/noti.mp3" type="client" />
+
+	<!-- GPS Images -->
+	<file src="images/turn_left.png" type="client" />
+	<file src="images/turn_right.png" type="client" />
+	<file src="images/straight.png" type="client" />
+	<file src="images/u_turn.png" type="client" />
+	<file src="images/finish.png" type="client" />
+</meta>

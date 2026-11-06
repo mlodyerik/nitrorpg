@@ -1,0 +1,6 @@
+<meta> 
+    <script src="replace.lua" type="client" cache="false" />
+    <file src="license_int.dff"/> 
+    <file src="license_int.col"/> 
+    <file src="license_int.txd"/> 
+</meta>

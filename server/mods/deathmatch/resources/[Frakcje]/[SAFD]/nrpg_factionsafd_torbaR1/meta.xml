@@ -1,0 +1,8 @@
+<meta>
+
+    <script src="s.lua" type="server"/>
+    <script src="c.lua" type="client" cache="false"/>
+    <file src="r1.dff"/>
+    <file src="r1.txd"/>
+
+</meta>

@@ -1,0 +1,6 @@
+<meta>
+    <file src="copcarla.dff" />
+    <file src="copcarla.txd" />
+    <script src="replace.lua" type="client" cache="false" />
+	
+</meta>

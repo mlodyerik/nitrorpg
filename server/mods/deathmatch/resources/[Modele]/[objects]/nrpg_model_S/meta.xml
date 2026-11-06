@@ -1,0 +1,6 @@
+<meta> 
+    <script src="replace.lua" type="client" cache="false" />
+    <file src="interior.dff"/> 
+    <file src="interior.col"/> 
+    <file src="interior.txd"/> 
+</meta>

@@ -1,0 +1,11 @@
+<meta>
+
+    <script src="fotoradary_c.lua" type="client" cache="false"/>
+    <script src="fotoradary_s.lua" type="server"/>
+    <script src="replace.lua" type="client" cache="false"/>
+    <file src="foto.txd"/>
+    <file src="foto.dff"/>
+    <file src="fotoradar.ogg"/>
+    <file src="radar.png"/>
+
+</meta>

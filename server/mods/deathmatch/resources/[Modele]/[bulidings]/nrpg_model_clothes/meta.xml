@@ -1,0 +1,6 @@
+<meta> 
+    <script src="replace.lua" type="client" cache="false" />
+    <file src="clothes_int.dff"/> 
+    <file src="clothes_int.col"/> 
+    <file src="clothes_int.txd"/> 
+</meta>

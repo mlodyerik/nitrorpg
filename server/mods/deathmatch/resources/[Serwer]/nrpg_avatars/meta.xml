@@ -1,0 +1,24 @@
+<meta>
+
+	<script src="s_avatar.lua" type="server"/>
+	<script src="c_avatar.lua" type="client" cache="false"/>
+
+	<file src='tex_matrix.fx' />
+    <file src='masked.fx' />
+    <file src='mask.png' />
+    <file src='no_avatar.png' />
+
+	<file src="hud_bg.png"/>
+	<file src="hud_border.png"/>
+	<file src="hud_border_shadow.png"/>
+
+    <export function="startImageDownload" type="server" />
+    <export function="startPlayerImageDownload" type="server" />
+
+	
+	<export function="dxCreateAvatar" type="client"/>
+	<export function="dxCreatePlayerAvatar" type="client"/>
+
+	<download_priority_group>1</download_priority_group>
+
+</meta>

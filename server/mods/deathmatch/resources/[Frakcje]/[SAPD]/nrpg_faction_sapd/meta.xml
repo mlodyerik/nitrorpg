@@ -1,0 +1,10 @@
+<meta>
+	<oop>true</oop>
+	
+    <script src="s_duty.lua" type="server" />
+    <script src="s_vehicles.lua" type="server" />
+    <script src="s_gate.lua" type="server" />
+    <script src="c_gui.lua" type="client" cache="false" />
+    <file src="video.png"/>
+	
+</meta>

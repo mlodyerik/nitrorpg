@@ -1,0 +1,6 @@
+<meta>
+	<script src="c.lua" type="client" cache="false"/>
+	<script src="s.lua" type="server"/>
+	<script src="animations.lua" type="client" />
+	<file src="img/background.png"/>
+</meta>

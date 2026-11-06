@@ -1,0 +1,30 @@
+<meta>
+	<info name="San Andreas - Customs" author="Jayceon" version="1.0.2" type="script" />
+	
+	<!-- Scripts -->
+	<script src="translationsG.lua" type="shared" />
+	<script src="sourceG.lua" type="shared" />
+	<script src="sourceS.lua" type="server" />
+	<script src="sourceC.lua" type="client" />
+	<script src="color/sourceC.lua" type="client" />
+	
+	<!-- Images -->
+	<file src="files/images/logo.png" />
+	<file src="files/images/hoveredrow.png" />
+	<file src="files/images/menunav.png" />
+	<file src="files/images/navbar/mouse.png" />
+	<file src="files/images/palette.png" />
+	<file src="files/images/light.png" />
+	
+	<!-- Fonts -->
+	<file src="files/fonts/chalet.ttf" />
+	<file src="files/fonts/icons.ttf" />
+	<file src="files/fonts/pricedown.ttf" />
+	
+	<!-- Sounds -->
+	<file src="files/sounds/menuback.wav" />
+	<file src="files/sounds/menuenter.mp3" />
+	<file src="files/sounds/menunavigate.mp3" />
+	<file src="files/sounds/moneychange.wav" />
+	<file src="files/sounds/notification.mp3" />
+</meta>

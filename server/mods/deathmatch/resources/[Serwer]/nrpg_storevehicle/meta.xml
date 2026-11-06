@@ -1,0 +1,10 @@
+<meta>
+	<script src="libs/animations.lua" type="client" />
+	<script src="c.lua" cache="false" type="client" />
+	<script src="s.lua" cache="false" type="server" />
+
+	<file src="libs/fuel.png"/>
+	<file src="libs/km.png"/>
+	<file src="libs/last_time.png"/>
+	<file src="libs/status.png"/>
+</meta>

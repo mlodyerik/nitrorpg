@@ -1,0 +1,10 @@
+<meta>
+
+    <script src="c.lua" type="client" cache="false"/>
+    <script src="s.lua" type="server"/>
+
+    <file src="circle.png"/>
+    <file src="scrollbarBG.png"/>
+    <file src="speaker.png"/>
+    
+</meta>

@@ -1,0 +1,6 @@
+local txd = engineLoadTXD ( "pbpump.txd", 3465 )
+engineImportTXD ( txd,  3465 )
+local dff = engineLoadDFF("pbpump.dff", 3465 )
+engineReplaceModel( dff, 3465 )
+local col = engineLoadCOL ( "pbpump.col", 3465 )
+engineReplaceCOL ( col, 3465 )

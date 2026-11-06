@@ -1,0 +1,12 @@
+<meta>
+	<!-- CLIENTSIDE -->
+	
+	<script src="boards/c_boards.lua" type="client" />
+	<script src="boards/s_boards.lua" type="server" />
+	
+	<script src="organization/s_org.lua" type="server" />
+	<script src="organization/c_org.lua" type="client" />
+
+	<script src="s_money_from_job.lua" type="server" />
+	
+</meta>

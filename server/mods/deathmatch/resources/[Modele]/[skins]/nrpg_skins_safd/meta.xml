@@ -1,0 +1,20 @@
+<meta>
+     <file src='279.dff' />
+   <file src='279.txd' />
+
+     <file src='278.dff' />
+   <file src='278.txd' />
+
+     <file src='277.dff' />
+   <file src='277.txd' />
+
+    <file src='206.dff' />
+   <file src='206.txd' />
+
+    <file src='305.dff' />
+   <file src='305.txd' />
+
+
+   
+  <script src="replace.lua" type="client" />
+</meta>

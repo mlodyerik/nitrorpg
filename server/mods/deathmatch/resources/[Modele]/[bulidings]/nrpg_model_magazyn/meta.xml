@@ -1,0 +1,6 @@
+<meta> 
+    <script src="replace.lua" type="client" cache="false" />
+    <file src="magazyn_int.dff"/> 
+    <file src="magazyn_int.col"/> 
+    <file src="magazyn_int.txd"/> 
+</meta>

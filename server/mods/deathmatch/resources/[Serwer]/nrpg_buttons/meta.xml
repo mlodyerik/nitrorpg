@@ -1,0 +1,12 @@
+<meta>
+
+	<file src="button.png"/>
+	<file src="button_on.png"/>
+
+	<script src="c.lua" type="client" cache="false"/>
+
+	<export function="dxCreateButton" type="client"/>
+	<export function="dxCreateText" type="client"/>
+	<download_priority_group>1</download_priority_group>
+	
+</meta>

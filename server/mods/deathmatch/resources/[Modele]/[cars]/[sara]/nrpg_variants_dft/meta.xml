@@ -1,0 +1,6 @@
+<meta>
+    <file src="dft.dff" />
+    <file src="dft.txd" />
+    <script src="replace.lua" type="client" />
+	
+</meta>

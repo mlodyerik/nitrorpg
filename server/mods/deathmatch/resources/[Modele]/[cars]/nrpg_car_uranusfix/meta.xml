@@ -1,0 +1,8 @@
+<meta>
+	<info type="misc" name="Car replacement for: Intruder" author="twojstaryitwojastara" description="" version="1" />
+	<file src="uranus.txd" />
+	<file src="uranus.dff" />
+	<script type="client" src="replace.lua" />
+	<script type="client" src="readme.lua" />
+	<!-- generated with http://mta.dzek.eu/ -->
+</meta>

@@ -1,0 +1,7 @@
+local txd = engineLoadTXD ( "mechanik.txd", 6063 )
+engineImportTXD ( txd,  6063 )
+local dff = engineLoadDFF("mechanik.dff", 6063 )
+engineReplaceModel( dff, 6063 )
+local col = engineLoadCOL ( "mechanik.col", 6063 )
+engineReplaceCOL ( col, 6063 )
+setOcclusionsEnabled ( false )

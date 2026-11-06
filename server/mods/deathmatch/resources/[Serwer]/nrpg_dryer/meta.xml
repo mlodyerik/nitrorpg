@@ -1,0 +1,9 @@
+<meta>
+
+	<script src="utils.lua" type="client" />
+	
+	<script src="c_dryer.lua" type="client" />
+	
+	<script src="s_dryer.lua" type="server" />
+	
+</meta>

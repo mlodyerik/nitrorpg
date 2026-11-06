@@ -1,0 +1,7 @@
+<meta>
+
+    <oop>true</oop>
+    <script src="s_variants.lua" type="server"/>
+    <export function="changeVehicleVariant" type="server"/>
+
+</meta>

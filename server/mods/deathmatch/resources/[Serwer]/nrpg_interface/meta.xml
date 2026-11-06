@@ -1,0 +1,80 @@
+<meta>
+	<download_priority_group>100</download_priority_group>
+	
+	<file src="fonts/normal.ttf"/>
+	<file src="fonts/bold.ttf"/>
+	<file src="fonts/gtav.ttf"/>
+	<file src="fonts/light.ttf"/>
+	<file src="fonts/cyfry.ttf"/>
+	<file src="fonts/money.ttf"/>
+
+
+	<script src="fonts_c.lua" cache="false" type="client"/>
+	<script src="main_c.lua" cache="false" type="client"/>
+	<script src="editbox_c.lua" type="client" cache="false"/>
+	<script src="animations.lua" type="client" cache="false"/>
+	<script src="editboxboard_c.lua" type="client" cache="false"/>
+	<script src="notifications_c.lua" type="client" cache="false"/>
+	<script src="notifications_s.lua" type="server" />
+	
+	<file src="img/background.png"/>
+	<file src="img/background_circle.png"/>
+	<file src="img/mowerjob_background.png"/>
+	<file src="img/warehousejob_background.png"/>
+	<file src="img/courierjob_background.png"/>
+	<file src="img/beekeeperjob_background.png"/>
+	<file src="img/farmerjob_background.png"/>
+	<file src="img/editbox_bar.png"/>
+	<file src="img/cross.png"/>
+	<file src="img/vehicle_icon.png"/>
+	<file src="img/info_icon.png"/>
+	<file src="img/promo_icon.png"/>
+	<file src="img/friends_icon.png"/>
+	<file src="img/switch_on.png"/>
+	<file src="img/switch_off.png"/>
+	<file src="img/character_icon.png"/>
+	<file src="img/packs_icon.png"/>
+	<file src="img/premium_icon.png"/>
+	<file src="img/game_icon.png"/>
+	<file src="img/settings_icon.png"/>
+	<file src="img/logo.png"/>
+	<file src="img/house_icon.png"/>
+	<file src="img/enter.png"/>
+	<file src="img/arrow_up.png"/>
+	<file src="img/arrow_down.png"/>
+	<file src="img/arrow_right.png"/>
+	<file src="img/arrow_left.png"/>
+
+	<file src="img/notifications/success.png"/>
+	<file src="img/notifications/info.png" />
+	<file src="img/notifications/error.png" />
+	<file src="img/notifications/message.png" />
+	<file src="img/notifications/money.png" />
+	<file src="sounds/error.mp3" type="client" />
+	<file src="sounds/info.mp3" type="client" />
+	<file src="sounds/troll.mp3" type="client" />
+	<file src="sounds/success.mp3" type="client" />
+
+	<export function="getGUIFont" type="client" />
+	<export function="dxDrawBorderedText" type="client" />
+	<export function="getInterfaceZoom" type="client" />
+	<export function="getInterfaceZoom2" type="client" />
+	<export function="dxDraw3DText" type="client" />
+	<export function="dxDrawRing" type="client" />
+
+	<export function="createCustomEditbox" type="client"/>
+    <export function="destroyCustomEditbox" type="client"/>
+    <export function="getCustomEditboxText" type="client"/>
+    <export function="customEditboxSetText" type="client"/>
+    <export function="customEditboxSetAlpha" type="client"/>
+    <export function="customEditboxGetSelected" type="client"/>
+    <export function="customEditboxSetPosition" type="client"/>
+    <export function="getEditboxSelected" type="client"/>
+	
+	<export function="createAnimation" type="client"/>
+
+	<export function="showPlayerNotification" type="client" />
+  	<export function="showPlayerNotification" type="server" />
+  	<export function="showGlobalNotification" type="server" />
+
+</meta>

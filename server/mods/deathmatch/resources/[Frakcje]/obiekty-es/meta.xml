@@ -1,0 +1,6 @@
+<meta>
+<file src="plama.txd"/>
+
+<file src="plama.dff"/>
+<script src="replace.lua" type="client"/>
+</meta>

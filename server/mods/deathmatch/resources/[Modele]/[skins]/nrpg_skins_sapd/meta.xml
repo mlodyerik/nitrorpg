@@ -1,0 +1,21 @@
+<meta>
+  <file src='71.dff' />   
+  <file src='71.txd' />
+  <file src='286.dff' />   
+  <file src='286.txd' />
+  <file src='285.dff' />   
+  <file src='285.txd' />
+  <file src='281.dff' />   
+  <file src='281.txd' />
+  <file src='284.dff' />   
+  <file src='284.txd' />
+  <file src='280.dff' />   
+  <file src='280.txd' />
+  <file src='282.dff' />   
+  <file src='282.txd' />
+  <file src='288.dff' />   
+  <file src='288.txd' />
+  <file src='283.dff' />   
+  <file src='283.txd' />
+  <script src="replace.lua" type="client" cache="false"/>
+</meta>

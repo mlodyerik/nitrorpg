@@ -1,0 +1,12 @@
+<meta>
+    <script src='server.lua' type='server' />
+    <script src='client.lua' type='client' />
+	<file src='firedep.wav' />
+	
+	
+	<file src='police.wav' />
+
+	<file src='fireladder.wav' />
+	
+	<file src='ambulance.wav' />
+</meta>

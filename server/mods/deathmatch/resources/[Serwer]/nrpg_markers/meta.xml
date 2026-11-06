@@ -1,0 +1,21 @@
+<meta>
+	<min_mta_version client="1.5.6" server="1.5.6" />
+	<script src="c.lua" type="client" cache="false"/>
+	<script src="c_font.lua" type="client" cache="false"/>
+
+	<file src="fonts/money.ttf"/>
+
+	<file src="img/default.png"/>
+	<file src="img/marker.png"/>
+
+
+
+	<file src="img/station.png"/>
+	<file src="img/door.png"/>
+	<file src="img/parking.png"/>
+	<file src="img/tuning.png"/>
+	<file src="img/mechanic.png"/>
+	<file src="img/engine.png"/>
+	<file src="img/spray.png"/>
+	<file src="img/pack.png"/>
+</meta>

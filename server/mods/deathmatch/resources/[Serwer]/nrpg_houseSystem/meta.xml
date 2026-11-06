@@ -1,0 +1,15 @@
+<meta>
+	<oop>true</oop>
+	<script src="c.lua" type="client"  cache = 'false'/>
+	<script src="s.lua" type="server" />
+
+	<file src="files/font.ttf"/>
+	<file src="files/images/settings.png"/>
+	<file src="files/images/enter.png"/>
+	<file src="files/images/buy.png"/>
+	<file src="files/images/edit.png"/>
+	<file src="files/images/locked.png"/>
+	<file src="files/images/unlocked.png"/>
+	<file src="files/images/rent.png"/>
+	<file src="files/images/back.png"/>
+</meta>

@@ -1,0 +1,12 @@
+<meta>
+
+	<script src="animations.lua" type="client" cache="false"/>
+	<script src="c.lua" type="client" cache="false"/>
+	<script src="s.lua" type="server"/>
+
+	<file src="img/door.png"/>
+	<file src="img/loading_background.jpg"/>
+	<file src="img/loading.png"/>
+
+	<export function="addInteriorToList" type="client"/>
+</meta>

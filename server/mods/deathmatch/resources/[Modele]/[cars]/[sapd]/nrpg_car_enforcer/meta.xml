@@ -1,0 +1,6 @@
+<meta>
+    <file src="enforcer.dff" />
+    <file src="enforcer.txd" />
+    <script src="replace.lua" type="client" />
+	
+</meta>

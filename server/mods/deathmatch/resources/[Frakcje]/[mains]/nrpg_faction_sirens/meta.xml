@@ -1,0 +1,13 @@
+<meta>	
+	<script src="s.lua" type="server" />
+	<script src="c.lua" type="client" cache="false"/>
+	<file src="1_premier.wav"/>
+	<file src="2_fire.wav"/>
+	<file src="3_cadrona.wav"/>
+	<file src="4_rancher.wav"/>
+	<file src="5_police_premier.wav"/>
+	<file src="5_police_horn_premier.wav"/>
+	<file src="SAPD1.mp3"/>
+	<file src="SAPD2.mp3"/>
+	<file src="SAPD3.mp3"/>
+</meta>

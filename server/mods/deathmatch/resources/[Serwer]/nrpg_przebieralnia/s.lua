@@ -1,0 +1,6 @@
+addEvent("switchSkin", true)
+addEventHandler("switchSkin", root, function(plr, id)
+    setElementModel(plr, id)
+	local uid = getElementData(plr, "player:sid")
+	local query = exports["nrpg_db"]:dbSet("UPDATE pystories_users SET skin=? WHERE id=?", id, uid)
+end)

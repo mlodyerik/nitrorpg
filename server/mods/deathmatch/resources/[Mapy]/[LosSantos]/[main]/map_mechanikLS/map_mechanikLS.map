@@ -1,0 +1,11 @@
+<map edf:definitions="editor_main">
+    <object id="object (staplaz_law) (1)" breakable="true" interior="0" alpha="255" dimension="0" model="6063" scale="1" doublesided="false" collisions="true" posX="1093.6477" posY="-1682.3715" posZ="15.253" rotX="0" rotY="0" rotZ="0"></object>
+    <removeWorldObject id="removeWorldObject (staplaz_law) (1)" radius="52.815624" interior="0" model="6063" lodModel="6071" posX="1087.9844" posY="-1682.3281" posZ="19.4375" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <removeWorldObject id="removeWorldObject (lamppost1) (1)" radius="6.0116315" interior="0" model="1297" lodModel="0" posX="1130.5391" posY="-1684.3203" posZ="15.89063" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <removeWorldObject id="removeWorldObject (lamppost1) (2)" radius="6.0116315" interior="0" model="1297" lodModel="0" posX="1108.0625" posY="-1707.1719" posZ="15.92969" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <removeWorldObject id="removeWorldObject (veg_tree3) (1)" radius="16.614464" interior="0" model="615" lodModel="0" posX="1051.25" posY="-1678.0234" posZ="13.28906" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <object id="object (vegspetrolpump) (1)" breakable="true" interior="0" alpha="255" dimension="0" model="3465" scale="1" doublesided="false" collisions="true" posX="1079.0" posY="-1666.8207" posZ="13.86" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (vegspetrolpump) (2)" breakable="true" interior="0" alpha="255" dimension="0" model="3465" scale="1" doublesided="false" collisions="true" posX="1079.21" posY="-1669.9821" posZ="13.86" rotX="0" rotY="0" rotZ="180"></object>
+    <object id="object (vegspetrolpump) (3)" breakable="true" interior="0" alpha="255" dimension="0" model="3465" scale="1" doublesided="false" collisions="true" posX="1079.21" posY="-1676.0195" posZ="13.86" rotX="0" rotY="0" rotZ="179.995"></object>
+    <object id="object (vegspetrolpump) (4)" breakable="true" interior="0" alpha="255" dimension="0" model="3465" scale="1" doublesided="false" collisions="true" posX="1079.0" posY="-1672.7959" posZ="13.86" rotX="0" rotY="0" rotZ="0"></object>
+</map>

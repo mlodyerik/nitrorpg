@@ -1,0 +1,7 @@
+<meta> 
+    <script src="s.lua" type="server"/>
+    <file src="model/STOP.dff"/>
+    <file src="kolizja/STOP.col"/>
+    <file src="tekstury/STOP.txd"/>    
+    <script type="client" src="c.lua"/>
+</meta>

@@ -1,0 +1,6 @@
+<meta>
+    <file src="fbiranch.dff" />
+    <file src="fbiranch.txd" />
+    <script src="replace.lua" type="client" cache="false" />
+	
+</meta>
