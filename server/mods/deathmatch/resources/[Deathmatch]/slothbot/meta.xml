@@ -1,5 +1,5 @@
 <meta>
-	<info author="Slothman" name="Slothbot" version="3.0" type="script" edf:definition="edf/Slothbot.edf"/>>
+	<info author="Slothman" name="Slothbot" version="3.0" type="script" />
 	<file src="edf/flag/flag.png" />
 	<file src="edf/flag/goflagx.txd"/>
 	<file src="edf/flag/kmb_goflag.col"/>
