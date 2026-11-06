@@ -1,10 +1,12 @@
 function connect()
-	SQL = dbConnect( "mysql", "dbname=db_82027;host=137.74.6.118", "db_82027", "wzojUO9VH6oL", "share=1" )
+	-- Konfiguracja lokalnego połączenia MySQL (XAMPP)
+	-- Host: 127.0.0.1, Port: 3306, User: root, Pass: (puste), Database: nitrorpg
+	SQL = dbConnect( "mysql", "dbname=nitrorpg;host=127.0.0.1;port=3306", "root", "", "share=1;charset=utf8mb4" )
 	if (not SQL) then
-		outputDebugString("BRAK POLACZENIA Z BAZA DANYCH!")
+		outputDebugString("[DB] BRAK POLACZENIA Z BAZA DANYCH! Sprawdź czy XAMPP MySQL jest uruchomiony.", 1)
 	else
-		outputDebugString("POLACZONO POMYSLNIE!")
-		zapytanie("SET NAMES utf8;")
+		outputDebugString("[DB] POLACZONO POMYSLNIE z bazą nitrorpg!", 3)
+		zapytanie("SET NAMES utf8mb4;")
 	end
 end
 
