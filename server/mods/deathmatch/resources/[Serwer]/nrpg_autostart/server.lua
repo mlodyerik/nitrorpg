@@ -5,16 +5,16 @@
 
 local startupOrder = {
     -- Krytyczne zasoby - bazy danych (PIERWSZEŃSTWO)
-    "[Serwer]/nrpg_db",
-    "[Serwer]/DB",
-    "[Serwer]/DB2",
+    "nrpg_db",
+    "DB",
+    "DB2",
     
     -- Core system
-    "[Serwer]/nrpg_core",
-    "[Serwer]/nrpg_lib",
+    "nrpg_core",
+    "nrpg_lib",
     
     -- Login system
-    "[Serwer]/nrpg_newlogin",
+    "nrpg_newlogin",
 }
 
 -- Wzorce zasobów do automatycznego uruchamiania
