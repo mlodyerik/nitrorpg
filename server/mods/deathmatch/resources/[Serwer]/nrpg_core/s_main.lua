@@ -9,25 +9,25 @@ end)
 
 addEvent("core:spawnPlayer", true)
 addEventHandler("core:spawnPlayer", root, function()
-	local pos=getElementData(source,"player:spawn")
+	local pos=getElementData(client,"player:spawn")
 	if not pos then return end
 	
 	-- Spawn gracza
-	spawnPlayer(source, pos[1], pos[2], pos[3])
-	setElementDimension(source, pos[5] or 0)
-	setElementInterior(source, pos[4] or 0)
-	setCameraTarget(source, source)
+	spawnPlayer(client, pos[1], pos[2], pos[3])
+	setElementDimension(client, pos[5] or 0)
+	setElementInterior(client, pos[4] or 0)
+	setCameraTarget(client, client)
 	
 	-- Fade in kamery
-	fadeCamera(source, true, 1.0)
+	fadeCamera(client, true, 1.0)
 	
-	toggleControl(source,"fire", false)
-	toggleControl(source,"aim_weapon", false)
-	loadPlayerData(source)
+	toggleControl(client,"fire", false)
+	toggleControl(client,"aim_weapon", false)
+	loadPlayerData(client)
 
-	outputChatBox(" ", source, 255, 255, 0, true)
-	outputChatBox("ⓘ#ffffff Hej! Jesteś tu pierwszy raz? Pod klawiszem F1 znajdziesz szczegółowy poradnik.", source, 255, 255, 0, true)
-	outputChatBox(" ", source, 255, 255, 0, true)
+	outputChatBox(" ", client, 255, 255, 0, true)
+	outputChatBox("ⓘ#ffffff Hej! Jesteś tu pierwszy raz? Pod klawiszem F1 znajdziesz szczegółowy poradnik.", client, 255, 255, 0, true)
+	outputChatBox(" ", client, 255, 255, 0, true)
 end)
 
 addEventHandler("onPlayerConnect", root, function(playerNick)
